@@ -1,0 +1,35 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pydantic-settings
+# AI / LLM
+langchain==0.1.20
+langchain-community==0.0.38
+langchain-core==0.1.52
+langchain-text-splitters
+langchain-google-genai
+langchain-groq
+langgraph
+# Voice & Media
+deepgram-sdk
+elevenlabs
+twilio
+websockets
+httpx
+livekit-api
+# Embeddings & Vector Store
+sentence-transformers
+faiss-cpu
+# Database
+sqlalchemy
+# Utilities
+tiktoken
+numpy
+python-docx
+cachetools
+supabase
+# Production RAG Upgrades
+rank_bm25
+rapidfuzz
+openpyxl

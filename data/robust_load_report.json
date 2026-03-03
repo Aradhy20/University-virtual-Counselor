@@ -1,0 +1,7 @@
+{
+  "users": 20,
+  "queries": 100,
+  "throughput": 16.29266580760923,
+  "p95_latency": 4071.7154000003575,
+  "success_rate": 100.0
+}

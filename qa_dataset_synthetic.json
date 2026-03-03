@@ -1,0 +1,1118 @@
+[
+  {
+    "query": "Hello, how are you?",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form bharna hai",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the courses offered by your university?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me hostel facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hi, I want to apply for B.Tech",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university ki fees kitni hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Rohan hai, main admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the placement scenario like?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke college me kitne faculty members hain?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am intrested in MBA, can i get some info?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Excited"
+  },
+  {
+    "query": "Kya aapke university me transport facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Namaste, kaise ho?",
+    "intent": "CHITCHAT",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the exam dates for this semester?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form kaise bharna hai?",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Confused"
+  },
+  {
+    "query": "I want to apply for PhD, what is the process?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university ki ranking kya hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Bye, thanks for your help!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Priya hai, main BCA lena chahti hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the fees structure for international students?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me sports facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hi, I am interested in MS, can you help me?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university me kitne students hain?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your support!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Excited"
+  },
+  {
+    "query": "Mujhe hostel ki information chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the scholarship options available?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me library facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for B.A, what are the requirements?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university ki admission process kya hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Namaste, main aapki university me admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the cutoff marks for B.Tech?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe placement ki information chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am interested in M.Tech, what are the specializations?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me canteen facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your time!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Karan hai, main admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the hostel fees per semester?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university me kitne courses hain?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for PhD in management, what is the process?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me gym facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Bye, have a great day!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ki ranking information chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the documents required for admission?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Aapke university me kitne international students hain?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hi, I am interested in BBA, can you help me?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Aisha hai, main BSc lena chahti hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the fees structure for BCA?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me wifi facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission ki last date information chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the placement stats for the previous year?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Namaste, kya aap batayein ge ki university me kon kon se courses available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for B.Tech, can you tell me about the admission process?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "hello, how r u?",
+    "intent": "CHITCHAT",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university me hostel facility available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Rohan hai, main admission form fill karna chahta hu",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the placement statistics for the university?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap batayein ge ki university me kitne faculty members hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help, bye!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe transport ki jaankari chahiye, kya aap bata sakte hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I'm interested in applying for the university, can you tell me about the fees?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university me exam ke liye koi preparation material available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hi, how are you?",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "University ke fees kitne hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Main admission form kaise bhare, aap bata sakte hai?",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the eligibility criteria for the university?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hai ki university me kon kon se extracurricular activities available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ki ranking jaankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to register for the university, can you help me?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university me kon kon se scholarships available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hello, good morning!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "University ke placement record kya hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Priya hai, main admission ke liye apply karna chahti hu",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the university's research initiatives?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hai ki university me kon kon se student organizations available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for the information!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ki fee structure jaankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I'm interested in applying for the university, can you tell me about the courses offered?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university me kon kon se certification courses available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hi, how's it going?",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "University ke exam pattern kya hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Confused"
+  },
+  {
+    "query": "Main admission form fill karna chahta hu, aap madad kar sakte hai?",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the university's alumni network and associations?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hai ki university me kon kon se entrepreneurship programs available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ki campus life jaankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for the university, can you help me with the process?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university me kon kon se international collaborations available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hello, good evening!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "University ke faculty kitne achhe hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Aryan hai, main admission ke liye apply karna chahta hu",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the university's social responsibility initiatives?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hai ki university me kon kon se cultural events available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help, see you later!",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hello, how are you?",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Rohan hai, main admission form kaise bhare?",
+    "intent": "INTERESTED",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the fees for MBA course?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university mein hostel facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Namaste, I want to apply for B.Tech",
+    "intent": "INTERESTED",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "How is the placement for CSE branch?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hain ki exam pattern kya hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the faculty for Commerce department",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe transport ke bare mein pata karna hai",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for the help",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Maine suna hai ki university mein sports facilities bahut acchi hai, kya yeh sach hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am interested in applying for PG course",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university mein part-time courses available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the eligibility criteria for PhD?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke admission process ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hello, how can I register for the entrance exam?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap mujhe bata sakte hain ki university mein koi scholarship available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the documents required for admission?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Main entrance exam mein appear karna chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hinglish",
+    "emotion": "Excited"
+  },
+  {
+    "query": "Kya university mein koi online courses available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the alumni network",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke campus life ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for the information",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hain ki university mein koi research initiatives hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am interested in applying for UG course",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke placement statistics ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the fee structure for international students?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university mein koi summer internship available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Main admission form fill karna chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the library facilities",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hain ki university mein koi cultural events hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "How can I get in touch with the admission team?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke hostel rules ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for a course, can you help me?",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university mein koi language courses available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the extracurricular activities available?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke faculty ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am interested in knowing more about the university",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aap bata sakte hain ki university mein koi counseling services hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Main university ke about mein jan na chahta hoon",
+    "intent": "RAG",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the process for applying for a scholarship?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya university mein koi medical facilities available hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the student organizations",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe university ke campus map ke bare mein batayein",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for the help, bye",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Namaste, kaise ho?",
+    "intent": "CHITCHAT",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for B.Tech",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form bharna hai",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the fees for MBA?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me hostel facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Hello, how r u?",
+    "intent": "CHITCHAT",
+    "language": "Hinglish",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am intrested in MCA course",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Rohan hai, main admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the placement scenario for B.Tech students?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me transport facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe BBA course ke bare me jankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the faculty for BCA course",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me exam ke liye koi coaching facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Priya hai, main B.Com karne ke liye admission lena chahti hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the hostel fees for girls?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me sports facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am intrested in M.Tech course, plz tell me about it",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form kaise bharna hai?",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the criteria for scholarship?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me library facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Karan hai, main B.A karne ke liye admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the placement for MCA students",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me canteen facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Thanks for your help, bye",
+    "intent": "CHITCHAT",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe B.Sc course ke bare me jankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am intrested in BBA course, plz tell me about it",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Excited"
+  },
+  {
+    "query": "Kya aapke college me medical facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Riya hai, main M.Com karne ke liye admission lena chahti hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the fees for BCA course?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me gym facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for Ph.D",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form bharna hai, plz help me",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What is the criteria for admission in B.Tech?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me Wi-Fi facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Aryan hai, main B.Tech karne ke liye admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to know about the faculty for M.Tech course",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me lab facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe M.A course ke bare me jankari chahiye",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I am intrested in B.Com course, plz tell me about it",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me auditorium facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mera naam Aarav hai, main M.Sc karne ke liye admission lena chahta hoon",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "What are the fees for M.Tech course?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me guest room facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "I want to apply for B.A",
+    "intent": "INTERESTED",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Mujhe admission form kaise bharna hai, plz help me",
+    "intent": "INTERESTED",
+    "language": "Hindi",
+    "emotion": "Confused"
+  },
+  {
+    "query": "What is the placement scenario for M.Tech students?",
+    "intent": "RAG",
+    "language": "English",
+    "emotion": "Neutral"
+  },
+  {
+    "query": "Kya aapke college me ATM facility hai?",
+    "intent": "RAG",
+    "language": "Hindi",
+    "emotion": "Neutral"
+  }
+]

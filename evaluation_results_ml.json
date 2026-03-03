@@ -1,0 +1,124 @@
+{
+  "metrics": {
+    "accuracy": 87.63440860215054,
+    "avg_latency_ms": 5.5358089426512365,
+    "total_queries": 186
+  },
+  "failures": [
+    {
+      "query": "Mujhe admission form kaise bharna hai?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I want to apply for PhD, what is the process?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Hi, I am interested in MS, can you help me?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I want to apply for PhD in management, what is the process?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Hi, I am interested in BBA, can you help me?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Mujhe admission ki last date information chahiye",
+      "expected": "RAG",
+      "predicted": "INTERESTED"
+    },
+    {
+      "query": "I want to apply for B.Tech, can you tell me about the admission process?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Mujhe transport ki jaankari chahiye, kya aap bata sakte hai?",
+      "expected": "RAG",
+      "predicted": "CHITCHAT"
+    },
+    {
+      "query": "I'm interested in applying for the university, can you tell me about the fees?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I'm interested in applying for the university, can you tell me about the courses offered?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I want to apply for the university, can you help me with the process?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I am interested in applying for PG course",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Hello, how can I register for the entrance exam?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Main entrance exam mein appear karna chahta hoon",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I am interested in applying for UG course",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "How can I get in touch with the admission team?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I want to apply for a course, can you help me?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Main university ke about mein jan na chahta hoon",
+      "expected": "RAG",
+      "predicted": "INTERESTED"
+    },
+    {
+      "query": "I am intrested in MCA course",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I am intrested in M.Tech course, plz tell me about it",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Mujhe admission form kaise bharna hai?",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I am intrested in BBA course, plz tell me about it",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    },
+    {
+      "query": "I am intrested in B.Com course, plz tell me about it",
+      "expected": "INTERESTED",
+      "predicted": "RAG"
+    }
+  ]
+}

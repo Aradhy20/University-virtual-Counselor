@@ -1,0 +1,65 @@
+BCA at TMU — Bachelor of Computer Applications
+=================================================
+
+Q1: BCA course ki details batao TMU mein.
+Q2: BCA ki fees kitni hai?
+Q3: BCA mein admission kaise hota hai?
+Q4: BCA ke baad kya scope hai? Job lagti hai?
+Q5: BCA Hons kya hai? Research option hai kya?
+Q6: BCA mein kya subjects padhaye jaate hain?
+Q7: BCA ke baad MCA kar sakte hain?
+Q8: TMU mein BCA placement kaisa hai?
+Q9: BCA kitne saal ka course hai?
+Q10: BCA ke liye 12th mein kaunsa subject chahiye?
+
+Answer:
+
+TMU ka BCA (Bachelor of Computer Applications) program CCSIT (College of Computing Sciences & IT) ke under aata hai. Yeh ek popular UG course hai jo IT field mein career banana chahne wale students ke liye ideal hai.
+
+PROGRAMS OFFERED:
+
+1. BCA (Hons) — 3+1 year Program
+   - Duration: 3 years (6 semesters) — BCA Hons
+   - Duration: 4 years (8 semesters) — BCA Hons with Research
+   - Eligibility: 12th pass (any stream) with minimum 45% marks
+   - Preferred: Mathematics/Computer Science in 12th (but not mandatory)
+   - Admission: Merit-based on 12th marks / CUET score
+
+KEY SUBJECTS:
+- Programming: C, C++, Java, Python, Web Development
+- Database: SQL, DBMS, Oracle
+- Networking: Computer Networks, Cyber Security basics
+- Software Engineering: Project Management, Software Testing
+- Modern Tech: Cloud Computing, AI/ML basics, Data Analytics
+- Mathematics: Discrete Math, Statistics, Operations Research
+
+BCA HONS WITH RESEARCH:
+- 4th year dedicated to research project
+- Students work on industry-relevant projects
+- Publication opportunity in academic journals
+- Strong foundation for higher studies (M.Tech/PhD)
+
+KEY FEATURES:
+- Modern Computer Labs: Latest hardware and software
+- Industry Partnerships: Tie-ups with IT companies for live projects
+- Hackathons & Coding Competitions: Regular events to build skills
+- Placement Training: Aptitude, communication, and technical training by CRC
+- Internships: Industry internships in 5th/6th semester
+
+CAREER OPPORTUNITIES AFTER BCA:
+- Software Developer / Web Developer
+- Mobile App Developer
+- Database Administrator
+- System Analyst
+- IT Consultant
+- Cyber Security Analyst
+- Cloud Computing professional
+- Higher Studies: MCA at TMU or any other university
+
+PLACEMENTS:
+- TMU BCA students placed in TCS, Wipro, Infosys, HCL, Cognizant
+- Average Package: ₹3-5 LPA for BCA graduates
+- 100% Placement Assistance through CRC
+
+For fee details, contact admissions: 1800-270-7373
+For more info, visit: https://www.tmu.ac.in/ccsit

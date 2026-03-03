@@ -1,0 +1,473 @@
+{
+  "hit_rate": 90.0,
+  "details": [
+    {
+      "id": 1,
+      "query": "BTech CSE ki fees kitni hai?",
+      "hit": true,
+      "matched": [
+        "fee",
+        "tuition",
+        "semester",
+        "btech",
+        "cse"
+      ]
+    },
+    {
+      "id": 2,
+      "query": "What is the eligibility for MBBS admission?",
+      "hit": true,
+      "matched": [
+        "mbbs",
+        "neet",
+        "eligibility",
+        "pcb"
+      ]
+    },
+    {
+      "id": 3,
+      "query": "Hostel mein AC room milega kya?",
+      "hit": true,
+      "matched": [
+        "ac",
+        "room",
+        "hostel"
+      ]
+    },
+    {
+      "id": 4,
+      "query": "TMU ka NAAC grade kya hai?",
+      "hit": true,
+      "matched": [
+        "a",
+        "naac"
+      ]
+    },
+    {
+      "id": 5,
+      "query": "Placement rate kitna hai engineering ka?",
+      "hit": true,
+      "matched": [
+        "placement"
+      ]
+    },
+    {
+      "id": 6,
+      "query": "Scholarship kitni milegi merit pe?",
+      "hit": true,
+      "matched": [
+        "merit",
+        "scholarship"
+      ]
+    },
+    {
+      "id": 7,
+      "query": "MBA admission process kya hai?",
+      "hit": true,
+      "matched": [
+        "entrance",
+        "admission"
+      ]
+    },
+    {
+      "id": 8,
+      "query": "Campus mein kya kya facilities hain?",
+      "hit": true,
+      "matched": [
+        "campus",
+        "sport",
+        "library",
+        "wifi"
+      ]
+    },
+    {
+      "id": 9,
+      "query": "Law ka course hai TMU mein?",
+      "hit": true,
+      "matched": [
+        "bci",
+        "law",
+        "ba llb",
+        "llb"
+      ]
+    },
+    {
+      "id": 10,
+      "query": "BSc Nursing ka course details batao",
+      "hit": true,
+      "matched": [
+        "bsc",
+        "nursing"
+      ]
+    },
+    {
+      "id": 11,
+      "query": "BCA course details and fees",
+      "hit": true,
+      "matched": [
+        "bca",
+        "fee",
+        "application"
+      ]
+    },
+    {
+      "id": 12,
+      "query": "Kya admission open hai abhi?",
+      "hit": true,
+      "matched": [
+        "apply",
+        "form",
+        "admission"
+      ]
+    },
+    {
+      "id": 13,
+      "query": "BPharm ki eligibility kya hai?",
+      "hit": true,
+      "matched": [
+        "pharmacy",
+        "bpharm",
+        "eligibility",
+        "pcm"
+      ]
+    },
+    {
+      "id": 14,
+      "query": "JEE Main se admission milega kya engineering mein?",
+      "hit": true,
+      "matched": [
+        "admission",
+        "jee"
+      ]
+    },
+    {
+      "id": 15,
+      "query": "Moradabad mein TMU ka campus kahan hai?",
+      "hit": false,
+      "matched": []
+    },
+    {
+      "id": 16,
+      "query": "TMU mein kitne colleges hain?",
+      "hit": false,
+      "matched": []
+    },
+    {
+      "id": 17,
+      "query": "What is the highest placement package?",
+      "hit": true,
+      "matched": [
+        "placement",
+        "highest",
+        "package",
+        "lpa"
+      ]
+    },
+    {
+      "id": 18,
+      "query": "MDS course hai dentistry ka?",
+      "hit": true,
+      "matched": [
+        "dental",
+        "dentistry",
+        "mds"
+      ]
+    },
+    {
+      "id": 19,
+      "query": "Transport facility hai campus ki?",
+      "hit": true,
+      "matched": [
+        "campus",
+        "bus",
+        "transport"
+      ]
+    },
+    {
+      "id": 20,
+      "query": "Fine Arts ka BFA course hai?",
+      "hit": true,
+      "matched": [
+        "studio",
+        "art",
+        "fine arts",
+        "bfa"
+      ]
+    },
+    {
+      "id": 21,
+      "query": "Agriculture BSc kya padha sakte hain TMU mein?",
+      "hit": true,
+      "matched": [
+        "agriculture",
+        "farm",
+        "bsc"
+      ]
+    },
+    {
+      "id": 22,
+      "query": "Sibling discount milta hai fees mein?",
+      "hit": true,
+      "matched": [
+        "sibling",
+        "fee",
+        "discount",
+        "scholarship"
+      ]
+    },
+    {
+      "id": 23,
+      "query": "Education loan milta hai TMU se?",
+      "hit": true,
+      "matched": [
+        "loan",
+        "education",
+        "bank"
+      ]
+    },
+    {
+      "id": 24,
+      "query": "CUET se admission ho sakta hai kya?",
+      "hit": true,
+      "matched": [
+        "admission"
+      ]
+    },
+    {
+      "id": 25,
+      "query": "MD Paediatrics ka course available hai?",
+      "hit": true,
+      "matched": [
+        "neet",
+        "paediatrics",
+        "md"
+      ]
+    },
+    {
+      "id": 26,
+      "query": "Library ki timing kya hai?",
+      "hit": false,
+      "matched": []
+    },
+    {
+      "id": 27,
+      "query": "Sports facilities batao TMU mein",
+      "hit": true,
+      "matched": [
+        "gym",
+        "sport"
+      ]
+    },
+    {
+      "id": 28,
+      "query": "TMU is located in which state?",
+      "hit": true,
+      "matched": [
+        "moradabad",
+        "uttar pradesh"
+      ]
+    },
+    {
+      "id": 29,
+      "query": "MBA mein dual specialization milta hai?",
+      "hit": true,
+      "matched": [
+        "dual",
+        "mba",
+        "marketing",
+        "finance",
+        "specialization"
+      ]
+    },
+    {
+      "id": 30,
+      "query": "Hostel fees per month kitni hai?",
+      "hit": true,
+      "matched": [
+        "mess",
+        "fee",
+        "room",
+        "hostel"
+      ]
+    },
+    {
+      "id": 31,
+      "query": "What documents are needed for admission?",
+      "hit": true,
+      "matched": [
+        "document"
+      ]
+    },
+    {
+      "id": 32,
+      "query": "NEET se kaunse courses mein admission milega?",
+      "hit": true,
+      "matched": [
+        "neet"
+      ]
+    },
+    {
+      "id": 33,
+      "query": "PharmD course hai TMU mein?",
+      "hit": true,
+      "matched": [
+        "pharmacy",
+        "doctor"
+      ]
+    },
+    {
+      "id": 34,
+      "query": "Wi-Fi available hai campus mein?",
+      "hit": true,
+      "matched": [
+        "campus",
+        "wifi",
+        "wi-fi"
+      ]
+    },
+    {
+      "id": 35,
+      "query": "BTech branches kaun kaun si hain?",
+      "hit": true,
+      "matched": [
+        "btech"
+      ]
+    },
+    {
+      "id": 36,
+      "query": "Mess food kaisa hai hostel mein?",
+      "hit": true,
+      "matched": [
+        "mess",
+        "food",
+        "hostel"
+      ]
+    },
+    {
+      "id": 37,
+      "query": "How to apply for TMU admission online?",
+      "hit": true,
+      "matched": [
+        "apply",
+        "online",
+        "admission"
+      ]
+    },
+    {
+      "id": 38,
+      "query": "MPharm Pharmacology ka scope kya hai?",
+      "hit": true,
+      "matched": [
+        "mpharm"
+      ]
+    },
+    {
+      "id": 39,
+      "query": "TMU established kab hua tha?",
+      "hit": true,
+      "matched": [
+        "university"
+      ]
+    },
+    {
+      "id": 40,
+      "query": "Kya TMU private university hai?",
+      "hit": true,
+      "matched": [
+        "tmu",
+        "university"
+      ]
+    },
+    {
+      "id": 41,
+      "query": "BDS dental course fees kya hai?",
+      "hit": true,
+      "matched": [
+        "bds",
+        "dental",
+        "fee"
+      ]
+    },
+    {
+      "id": 42,
+      "query": "Average placement package kitna hai?",
+      "hit": true,
+      "matched": [
+        "package",
+        "lpa",
+        "average"
+      ]
+    },
+    {
+      "id": 43,
+      "query": "LLM course available hai kya?",
+      "hit": false,
+      "matched": []
+    },
+    {
+      "id": 44,
+      "query": "Medical college mein MBBS seats kitni hain?",
+      "hit": true,
+      "matched": [
+        "mbbs",
+        "medical",
+        "seat"
+      ]
+    },
+    {
+      "id": 45,
+      "query": "Exam pattern kya hai TMU ka?",
+      "hit": true,
+      "matched": [
+        "exam"
+      ]
+    },
+    {
+      "id": 46,
+      "query": "Girls hostel safe hai kya?",
+      "hit": true,
+      "matched": [
+        "girl",
+        "safe",
+        "security",
+        "hostel"
+      ]
+    },
+    {
+      "id": 47,
+      "query": "Kya direct admission milta hai bina entrance ke?",
+      "hit": true,
+      "matched": [
+        "entrance",
+        "admission"
+      ]
+    },
+    {
+      "id": 48,
+      "query": "MSc Nursing course details",
+      "hit": true,
+      "matched": [
+        "clinical",
+        "nursing",
+        "msc"
+      ]
+    },
+    {
+      "id": 49,
+      "query": "Top recruiters kaun hain TMU ke?",
+      "hit": true,
+      "matched": [
+        "recruiter",
+        "wipro",
+        "infosys",
+        "tcs"
+      ]
+    },
+    {
+      "id": 50,
+      "query": "Lateral entry available hai BTech mein?",
+      "hit": false,
+      "matched": []
+    }
+  ]
+}

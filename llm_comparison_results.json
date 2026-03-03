@@ -1,0 +1,17 @@
+[
+  {
+    "model": "llama-3.3-70b-versatile",
+    "accuracy": 96.0,
+    "avg_latency_ms": 989.4813013076782
+  },
+  {
+    "model": "mixtral-8x7b-32768",
+    "accuracy": 0.0,
+    "avg_latency_ms": 41.94981098175049
+  },
+  {
+    "model": "llama3-8b-8192",
+    "accuracy": 0.0,
+    "avg_latency_ms": 42.122859954833984
+  }
+]

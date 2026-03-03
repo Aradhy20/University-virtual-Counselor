@@ -1,0 +1,674 @@
+{
+    "version": "1.0",
+    "description": "Golden dataset for RAG retrieval accuracy testing. 50 diverse QA pairs covering TMU admission queries in Hinglish and English.",
+    "queries": [
+        {
+            "id": 1,
+            "query": "BTech CSE ki fees kitni hai?",
+            "lang": "hinglish",
+            "category": "fees",
+            "expected_keywords": [
+                "fee",
+                "btech",
+                "cse",
+                "tuition",
+                "semester"
+            ],
+            "expected_answer_fragment": "61,200"
+        },
+        {
+            "id": 2,
+            "query": "What is the eligibility for MBBS admission?",
+            "lang": "english",
+            "category": "eligibility",
+            "expected_keywords": [
+                "mbbs",
+                "eligibility",
+                "neet",
+                "12th",
+                "pcb"
+            ],
+            "expected_answer_fragment": "NEET"
+        },
+        {
+            "id": 3,
+            "query": "Hostel mein AC room milega kya?",
+            "lang": "hinglish",
+            "category": "hostel",
+            "expected_keywords": [
+                "hostel",
+                "room",
+                "ac",
+                "accommodation"
+            ],
+            "expected_answer_fragment": "hostel"
+        },
+        {
+            "id": 4,
+            "query": "TMU ka NAAC grade kya hai?",
+            "lang": "hinglish",
+            "category": "accreditation",
+            "expected_keywords": [
+                "naac",
+                "grade",
+                "accreditation",
+                "a"
+            ],
+            "expected_answer_fragment": "NAAC"
+        },
+        {
+            "id": 5,
+            "query": "Placement rate kitna hai engineering ka?",
+            "lang": "hinglish",
+            "category": "placement",
+            "expected_keywords": [
+                "placement",
+                "package",
+                "percent",
+                "lpa"
+            ],
+            "expected_answer_fragment": "placement"
+        },
+        {
+            "id": 6,
+            "query": "Scholarship kitni milegi merit pe?",
+            "lang": "hinglish",
+            "category": "scholarship",
+            "expected_keywords": [
+                "scholarship",
+                "merit",
+                "percent",
+                "waiver"
+            ],
+            "expected_answer_fragment": "scholarship"
+        },
+        {
+            "id": 7,
+            "query": "MBA admission process kya hai?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "mba",
+                "admission",
+                "cat",
+                "mat",
+                "entrance"
+            ],
+            "expected_answer_fragment": "MBA"
+        },
+        {
+            "id": 8,
+            "query": "Campus mein kya kya facilities hain?",
+            "lang": "hinglish",
+            "category": "campus",
+            "expected_keywords": [
+                "campus",
+                "library",
+                "sport",
+                "lab",
+                "wifi"
+            ],
+            "expected_answer_fragment": "campus"
+        },
+        {
+            "id": 9,
+            "query": "Law ka course hai TMU mein?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "law",
+                "llb",
+                "ba llb",
+                "legal",
+                "bci"
+            ],
+            "expected_answer_fragment": "law"
+        },
+        {
+            "id": 10,
+            "query": "BSc Nursing ka course details batao",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "nursing",
+                "bsc",
+                "clinical",
+                "neet"
+            ],
+            "expected_answer_fragment": "nursing"
+        },
+        {
+            "id": 11,
+            "query": "BCA course details and fees",
+            "lang": "english",
+            "category": "programs",
+            "expected_keywords": [
+                "bca",
+                "computer",
+                "fee",
+                "application"
+            ],
+            "expected_answer_fragment": "BCA"
+        },
+        {
+            "id": 12,
+            "query": "Kya admission open hai abhi?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "admission",
+                "open",
+                "apply",
+                "form"
+            ],
+            "expected_answer_fragment": "admission"
+        },
+        {
+            "id": 13,
+            "query": "BPharm ki eligibility kya hai?",
+            "lang": "hinglish",
+            "category": "eligibility",
+            "expected_keywords": [
+                "pharmacy",
+                "bpharm",
+                "eligibility",
+                "12th",
+                "pcm"
+            ],
+            "expected_answer_fragment": "pharmacy"
+        },
+        {
+            "id": 14,
+            "query": "JEE Main se admission milega kya engineering mein?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "jee",
+                "engineering",
+                "btech",
+                "admission",
+                "entrance"
+            ],
+            "expected_answer_fragment": "JEE"
+        },
+        {
+            "id": 15,
+            "query": "Moradabad mein TMU ka campus kahan hai?",
+            "lang": "hinglish",
+            "category": "location",
+            "expected_keywords": [
+                "moradabad",
+                "campus",
+                "location",
+                "acre"
+            ],
+            "expected_answer_fragment": "Moradabad"
+        },
+        {
+            "id": 16,
+            "query": "TMU mein kitne colleges hain?",
+            "lang": "hinglish",
+            "category": "overview",
+            "expected_keywords": [
+                "college",
+                "faculty",
+                "department",
+                "university"
+            ],
+            "expected_answer_fragment": "college"
+        },
+        {
+            "id": 17,
+            "query": "What is the highest placement package?",
+            "lang": "english",
+            "category": "placement",
+            "expected_keywords": [
+                "highest",
+                "package",
+                "lpa",
+                "placement"
+            ],
+            "expected_answer_fragment": "LPA"
+        },
+        {
+            "id": 18,
+            "query": "MDS course hai dentistry ka?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "mds",
+                "dental",
+                "dentistry"
+            ],
+            "expected_answer_fragment": "dental"
+        },
+        {
+            "id": 19,
+            "query": "Transport facility hai campus ki?",
+            "lang": "hinglish",
+            "category": "campus",
+            "expected_keywords": [
+                "transport",
+                "bus",
+                "campus",
+                "route"
+            ],
+            "expected_answer_fragment": "transport"
+        },
+        {
+            "id": 20,
+            "query": "Fine Arts ka BFA course hai?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "fine arts",
+                "bfa",
+                "art",
+                "studio"
+            ],
+            "expected_answer_fragment": "fine art"
+        },
+        {
+            "id": 21,
+            "query": "Agriculture BSc kya padha sakte hain TMU mein?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "agriculture",
+                "bsc",
+                "farm",
+                "crop"
+            ],
+            "expected_answer_fragment": "agriculture"
+        },
+        {
+            "id": 22,
+            "query": "Sibling discount milta hai fees mein?",
+            "lang": "hinglish",
+            "category": "scholarship",
+            "expected_keywords": [
+                "sibling",
+                "discount",
+                "scholarship",
+                "fee"
+            ],
+            "expected_answer_fragment": "sibling"
+        },
+        {
+            "id": 23,
+            "query": "Education loan milta hai TMU se?",
+            "lang": "hinglish",
+            "category": "scholarship",
+            "expected_keywords": [
+                "loan",
+                "education",
+                "bank",
+                "finance"
+            ],
+            "expected_answer_fragment": "loan"
+        },
+        {
+            "id": 24,
+            "query": "CUET se admission ho sakta hai kya?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "cuet",
+                "admission",
+                "entrance",
+                "exam"
+            ],
+            "expected_answer_fragment": "CUET"
+        },
+        {
+            "id": 25,
+            "query": "MD Paediatrics ka course available hai?",
+            "lang": "english",
+            "category": "programs",
+            "expected_keywords": [
+                "md",
+                "paediatrics",
+                "medical",
+                "neet"
+            ],
+            "expected_answer_fragment": "paediatrics"
+        },
+        {
+            "id": 26,
+            "query": "Library ki timing kya hai?",
+            "lang": "hinglish",
+            "category": "campus",
+            "expected_keywords": [
+                "library",
+                "timing",
+                "book",
+                "resource"
+            ],
+            "expected_answer_fragment": "library"
+        },
+        {
+            "id": 27,
+            "query": "Sports facilities batao TMU mein",
+            "lang": "hinglish",
+            "category": "campus",
+            "expected_keywords": [
+                "sport",
+                "cricket",
+                "football",
+                "gym",
+                "ground"
+            ],
+            "expected_answer_fragment": "sport"
+        },
+        {
+            "id": 28,
+            "query": "TMU is located in which state?",
+            "lang": "english",
+            "category": "location",
+            "expected_keywords": [
+                "uttar pradesh",
+                "moradabad",
+                "up",
+                "india"
+            ],
+            "expected_answer_fragment": "Uttar Pradesh"
+        },
+        {
+            "id": 29,
+            "query": "MBA mein dual specialization milta hai?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "mba",
+                "dual",
+                "specialization",
+                "marketing",
+                "finance"
+            ],
+            "expected_answer_fragment": "dual"
+        },
+        {
+            "id": 30,
+            "query": "Hostel fees per month kitni hai?",
+            "lang": "hinglish",
+            "category": "fees",
+            "expected_keywords": [
+                "hostel",
+                "fee",
+                "month",
+                "mess",
+                "room"
+            ],
+            "expected_answer_fragment": "hostel"
+        },
+        {
+            "id": 31,
+            "query": "What documents are needed for admission?",
+            "lang": "english",
+            "category": "admission",
+            "expected_keywords": [
+                "document",
+                "marksheet",
+                "certificate",
+                "photo",
+                "aadhar"
+            ],
+            "expected_answer_fragment": "document"
+        },
+        {
+            "id": 32,
+            "query": "NEET se kaunse courses mein admission milega?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "neet",
+                "mbbs",
+                "bds",
+                "nursing",
+                "medical"
+            ],
+            "expected_answer_fragment": "NEET"
+        },
+        {
+            "id": 33,
+            "query": "PharmD course hai TMU mein?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "pharmd",
+                "pharmacy",
+                "doctor",
+                "clinical"
+            ],
+            "expected_answer_fragment": "Pharm"
+        },
+        {
+            "id": 34,
+            "query": "Wi-Fi available hai campus mein?",
+            "lang": "hinglish",
+            "category": "campus",
+            "expected_keywords": [
+                "wifi",
+                "wi-fi",
+                "internet",
+                "campus"
+            ],
+            "expected_answer_fragment": "Wi-Fi"
+        },
+        {
+            "id": 35,
+            "query": "BTech branches kaun kaun si hain?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "btech",
+                "cse",
+                "mechanical",
+                "civil",
+                "electrical",
+                "ece"
+            ],
+            "expected_answer_fragment": "B.Tech"
+        },
+        {
+            "id": 36,
+            "query": "Mess food kaisa hai hostel mein?",
+            "lang": "hinglish",
+            "category": "hostel",
+            "expected_keywords": [
+                "mess",
+                "food",
+                "hostel",
+                "meal"
+            ],
+            "expected_answer_fragment": "mess"
+        },
+        {
+            "id": 37,
+            "query": "How to apply for TMU admission online?",
+            "lang": "english",
+            "category": "admission",
+            "expected_keywords": [
+                "apply",
+                "online",
+                "form",
+                "admission",
+                "website"
+            ],
+            "expected_answer_fragment": "apply"
+        },
+        {
+            "id": 38,
+            "query": "MPharm Pharmacology ka scope kya hai?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "mpharm",
+                "pharmacology",
+                "pharmacy",
+                "master"
+            ],
+            "expected_answer_fragment": "pharm"
+        },
+        {
+            "id": 39,
+            "query": "TMU established kab hua tha?",
+            "lang": "hinglish",
+            "category": "overview",
+            "expected_keywords": [
+                "establish",
+                "found",
+                "year",
+                "2008",
+                "university"
+            ],
+            "expected_answer_fragment": "200"
+        },
+        {
+            "id": 40,
+            "query": "Kya TMU private university hai?",
+            "lang": "hinglish",
+            "category": "overview",
+            "expected_keywords": [
+                "private",
+                "university",
+                "tmu",
+                "jain"
+            ],
+            "expected_answer_fragment": "private"
+        },
+        {
+            "id": 41,
+            "query": "BDS dental course fees kya hai?",
+            "lang": "hinglish",
+            "category": "fees",
+            "expected_keywords": [
+                "bds",
+                "dental",
+                "fee",
+                "semester"
+            ],
+            "expected_answer_fragment": "dental"
+        },
+        {
+            "id": 42,
+            "query": "Average placement package kitna hai?",
+            "lang": "hinglish",
+            "category": "placement",
+            "expected_keywords": [
+                "average",
+                "package",
+                "lpa",
+                "salary"
+            ],
+            "expected_answer_fragment": "average"
+        },
+        {
+            "id": 43,
+            "query": "LLM course available hai kya?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "llm",
+                "law",
+                "master",
+                "legal"
+            ],
+            "expected_answer_fragment": "LLM"
+        },
+        {
+            "id": 44,
+            "query": "Medical college mein MBBS seats kitni hain?",
+            "lang": "hinglish",
+            "category": "programs",
+            "expected_keywords": [
+                "mbbs",
+                "seat",
+                "medical",
+                "intake"
+            ],
+            "expected_answer_fragment": "MBBS"
+        },
+        {
+            "id": 45,
+            "query": "Exam pattern kya hai TMU ka?",
+            "lang": "hinglish",
+            "category": "academic",
+            "expected_keywords": [
+                "exam",
+                "semester",
+                "marks",
+                "internal"
+            ],
+            "expected_answer_fragment": "exam"
+        },
+        {
+            "id": 46,
+            "query": "Girls hostel safe hai kya?",
+            "lang": "hinglish",
+            "category": "hostel",
+            "expected_keywords": [
+                "girl",
+                "hostel",
+                "safe",
+                "security",
+                "warden"
+            ],
+            "expected_answer_fragment": "hostel"
+        },
+        {
+            "id": 47,
+            "query": "Kya direct admission milta hai bina entrance ke?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "direct",
+                "admission",
+                "merit",
+                "entrance"
+            ],
+            "expected_answer_fragment": "admission"
+        },
+        {
+            "id": 48,
+            "query": "MSc Nursing course details",
+            "lang": "english",
+            "category": "programs",
+            "expected_keywords": [
+                "msc",
+                "nursing",
+                "master",
+                "clinical"
+            ],
+            "expected_answer_fragment": "nursing"
+        },
+        {
+            "id": 49,
+            "query": "Top recruiters kaun hain TMU ke?",
+            "lang": "hinglish",
+            "category": "placement",
+            "expected_keywords": [
+                "recruiter",
+                "tcs",
+                "infosys",
+                "wipro",
+                "company"
+            ],
+            "expected_answer_fragment": "recruit"
+        },
+        {
+            "id": 50,
+            "query": "Lateral entry available hai BTech mein?",
+            "lang": "hinglish",
+            "category": "admission",
+            "expected_keywords": [
+                "lateral",
+                "entry",
+                "diploma",
+                "btech",
+                "2nd year"
+            ],
+            "expected_answer_fragment": "lateral"
+        }
+    ]
+}

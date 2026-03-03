@@ -1,0 +1,20 @@
+Q: What new technologies are integrated into TMU's curriculum for the 2026-27 academic year?
+A: TMU has integrated several new, cutting-edge technologies into its curriculum for 2026-27, with a strong focus on Natural Language Processing (NLP) and Artificial Intelligence. This includes specializations in AI, Machine Learning, Deep Learning, Data Science, Cyber Security, Cloud Technology, Block Chain Technology, and Additive Manufacturing.
+
+Q: Does TMU offer programs focusing on NLP (Natural Language Processing)?
+A: Yes, TMU's curriculum for 2026-27 heavily emphasizes NLP technologies within its Computer Science and Artificial Intelligence programs. Students learn how to build advanced AI models that can understand, interpret, and generate human language, preparing them for the next generation of AI development.
+
+Q: What are the key academic advancements at TMU for 2026-27?
+A: TMU has proactively implemented the National Education Policy (NEP) 2020 and Outcome-Based Education (OBE). Under NEP 2020, students have flexible exit options: a 3-year UG degree, or a 4-year Honours degree (with or without research). 
+
+Q: What are some of TMU's top rankings in 2025?
+A: According to IIRF Rankings 2025, TMU is the 4th top private university in UP and 41st nationally. Its Medical College is ranked No. 1 in UP, Dental College is 4th in UP, and College of Pharmacy is 7th in UP. TMU also holds Platinum Bands in R. World India Academia, Employability, and Research Rankings 2026.
+
+Q: What new journals did TMU launch recently?
+A: TMU launched two new journals in 2025: the International Journal of Integrated Healthcare (ISSN: 3049-2505) and the Teerthanker Journal of Law and Governance (ISSN: 3107-7730).
+
+Q: Can students exit early from their undergraduate programs under the new NEP 2020 rules at TMU?
+A: Yes. Under the provisions of NEP 2020, a student who chooses to exit the program after successfully completing three years will be awarded an undergraduate (UG) degree. Students completing the full four-year program will earn an Honours degree.
+
+Q: Does TMU have any Centre of Excellence?
+A: Yes, TMU has multiple Centres of Learning, including a Centre of Excellence by NVidia, a Centre of Excellence in Cyber Security by WhizHack Technologies, a Centre of Excellence in Civil Engineering by Ultratech Cement, and Centres for Indian Knowledge System and Jain Studies.

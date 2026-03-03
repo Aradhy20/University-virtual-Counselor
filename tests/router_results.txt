@@ -1,0 +1,12 @@
+Query: 'What is the fee structure?' | Expected: RAG | Predicted: RAG ✅
+Query: 'I want to apply for BTech' | Expected: INTERESTED | Predicted: INTERESTED ✅
+Query: 'Hello Aditi' | Expected: CHITCHAT | Predicted: CHITCHAT ✅
+Query: 'My dad wants to know the cost of MBA' | Expected: RAG | Predicted: RAG ✅
+Query: 'Can you help me with admission?' | Expected: INTERESTED | Predicted: INTERESTED ✅
+Query: 'Where is the college?' | Expected: RAG | Predicted: RAG ✅
+Query: 'Good morning' | Expected: CHITCHAT | Predicted: CHITCHAT ✅
+Query: 'Do you have a gym?' | Expected: RAG | Predicted: RAG ✅
+Query: 'I am looking for a job' | Expected: RAG | Predicted: RAG ✅
+Query: 'What is the highest package?' | Expected: RAG | Predicted: RAG ✅
+
+Accuracy: 10/10 (100.0%)

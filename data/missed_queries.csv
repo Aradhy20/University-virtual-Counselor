@@ -1,0 +1,85 @@
+timestamp,query,confidence
+2026-02-17 17:13:23.882329,What are the B.Tech fees?,0.0
+2026-02-17 17:37:19.608216,What are the B.Tech fees?,0.0
+2026-02-17 17:52:12.756564,What are the B.Tech fees?,0.0
+2026-02-17 17:58:59.701558,What are the B.Tech fees?,0.0
+2026-02-17 18:01:05.781732,are you,0.0
+2026-02-17 18:01:09.041008,i am still looking about bc course,0.0
+2026-02-17 18:01:27.813076,i i want to know about b c a course,0.0
+2026-02-17 18:01:37.253201,i'm looking for mba,0.0
+2026-02-17 18:01:43.561016,like,0.0
+2026-02-17 18:03:02.828962,like,0.0
+2026-02-17 18:03:06.860286,pca,0.0
+2026-02-17 23:52:11.827270,Kya admission open hai B.Tech ke liye?,0.0
+2026-02-17 23:52:12.159787,What is the fee structure for MBA?,0.0
+2026-02-17 23:52:12.337866,Hostel fees kitni hai?,0.0
+2026-02-17 23:52:47.665093,Kya admission open hai B.Tech ke liye?,0.0
+2026-02-17 23:52:47.932635,What is the fee structure for MBA?,0.0
+2026-02-17 23:52:48.118608,Hostel fees kitni hai?,0.0
+2026-02-17 23:54:13.848374,Kya admission open hai B.Tech ke liye?,0.0
+2026-02-17 23:54:14.130962,What is the fee structure for MBA?,0.0
+2026-02-17 23:54:14.335865,Hostel fees kitni hai?,0.0
+2026-02-17 23:56:35.467141,Kya admission open hai B.Tech ke liye?,0.0
+2026-02-17 23:56:35.704128,What is the fee structure for MBA?,0.0
+2026-02-17 23:56:35.963380,Hostel fees kitni hai?,0.0
+2026-02-17 23:58:44.865553,Kya admission open hai B.Tech ke liye?,0.0
+2026-02-17 23:58:45.129538,What is the fee structure for MBA?,0.0
+2026-02-17 23:58:45.432609,Hostel fees kitni hai?,0.0
+2026-03-03 11:06:32.370014,do you have international collaborations?,0.019
+2026-03-03 11:06:33.676474,is there a library?,0.004
+2026-03-03 11:06:33.987252,can i get admission through cuet?,0.025
+2026-03-03 11:06:34.636106,do you have a startup cell?,0.533
+2026-03-03 11:36:05.387445,do you have international collaborations?,0.0
+2026-03-03 11:36:07.931651,what is the ranking of tmu?,0.0
+2026-03-03 11:36:08.388558,is there a library?,0.0
+2026-03-03 11:36:08.659294,can i get admission through cuet?,0.0
+2026-03-03 11:36:09.317918,do you have a startup cell?,0.0
+2026-03-03 11:36:09.852408,why should i choose tmu?,0.0
+2026-03-03 11:53:43.890864,do you have international collaborations?,0.197
+2026-03-03 11:53:45.685219,is there a library?,0.004
+2026-03-03 11:53:46.089534,can i get admission through cuet?,0.492
+2026-03-03 11:53:46.648987,do you have a startup cell?,0.005
+2026-03-03 13:35:11.955223,and kaisi ho,0.0
+2026-03-03 13:35:13.201781,i want to take admission.,0.0
+2026-03-03 13:35:14.226412,B.Tech admission process what hai?,0.0
+2026-03-03 13:35:15.198344,MBBS Mechanical Engineering seat mil jayegi kya?,0.0
+2026-03-03 13:35:16.186462,BBA of next batch when start hoga?,0.0
+2026-03-03 13:35:17.161897,do you have nursing courses?,0.0
+2026-03-03 13:35:18.062903,MBA of fees how much hai?,0.0
+2026-03-03 13:35:19.370077,hostel fees what is per year?,0.0
+2026-03-03 13:35:20.812188,is there any scholarship for merit students?,0.0
+2026-03-03 13:35:21.930944,jain minority scholarship available is kya?,0.0
+2026-03-03 13:35:23.163355,can i pay the fees in installments?,0.0
+2026-03-03 13:35:24.234326,hostel Mechanical Engineering khana kaisa hai?,0.0
+2026-03-03 13:35:29.778102,is the campus safe for girls?,0.0
+2026-03-03 13:35:31.385092,what campus Mechanical Engineering wifi hai?,0.0
+2026-03-03 13:35:33.742814,library facilities kaisi hain?,0.0
+2026-03-03 13:35:35.506465,are you an Artificial Intelligence or a robot?,0.0
+2026-03-03 13:35:36.825993,tumhara asli naam what hai?,0.0
+2026-03-03 13:35:37.992417,linux Mechanical Engineering directory how banate hain?,0.0
+2026-03-03 13:35:39.381060,tell Mechanical Engineering a joke.,0.0
+2026-03-03 13:35:40.492899,who is the prime minister of india?,0.0
+2026-03-03 13:35:45.682366,what bola mujhe understand not aaya,0.0
+2026-03-03 13:35:46.606566,network issue,0.0
+2026-03-03 13:37:03.368184,and kaisi ho,1.1051162800868042e-05
+2026-03-03 13:37:04.331479,i want to take admission.,1.2818376490031369e-05
+2026-03-03 13:37:05.214633,B.Tech admission process what hai?,1.0680109880922828e-05
+2026-03-03 13:37:06.334320,MBBS Mechanical Engineering seat mil jayegi kya?,1.111165329348296e-05
+2026-03-03 13:37:07.616157,BBA of next batch when start hoga?,1.0204145837633405e-05
+2026-03-03 13:37:08.762554,do you have nursing courses?,1.251553294423502e-05
+2026-03-03 13:37:09.704893,MBA of fees how much hai?,1.0397823643870652e-05
+2026-03-03 13:37:10.982974,hostel fees what is per year?,1.1132081453979481e-05
+2026-03-03 13:37:12.257160,is there any scholarship for merit students?,1.3123315511620604e-05
+2026-03-03 13:37:13.263188,jain minority scholarship available is kya?,1.0804898010974284e-05
+2026-03-03 13:37:14.208383,can i pay the fees in installments?,1.097941549232928e-05
+2026-03-03 13:37:15.400449,hostel Mechanical Engineering khana kaisa hai?,1.1828353308374062e-05
+2026-03-03 13:37:16.803740,is the campus safe for girls?,2.4260229110950604e-05
+2026-03-03 13:37:18.220553,what campus Mechanical Engineering wifi hai?,6.131809641374275e-05
+2026-03-03 13:37:20.381439,library facilities kaisi hain?,1.1675084351736587e-05
+2026-03-03 13:37:21.642738,are you an Artificial Intelligence or a robot?,1.2122645784984343e-05
+2026-03-03 13:37:22.783297,tumhara asli naam what hai?,1.0659879990271293e-05
+2026-03-03 13:37:23.898943,linux Mechanical Engineering directory how banate hain?,1.1170024663442746e-05
+2026-03-03 13:37:25.133314,tell Mechanical Engineering a joke.,1.1190944860572927e-05
+2026-03-03 13:37:26.412621,who is the prime minister of india?,1.434569730918156e-05
+2026-03-03 13:37:31.203357,what bola mujhe understand not aaya,9.954878805729095e-06
+2026-03-03 13:37:32.253476,network issue,1.0574423868092708e-05

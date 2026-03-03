@@ -1,0 +1,471 @@
+{
+  "config": {
+    "noisy_audio": 0.1,
+    "malicious": 0.05,
+    "emotional": 0.15,
+    "interruption": 0.03,
+    "incomplete_data": 0.05
+  },
+  "stats": {
+    "SUCCESS": 781,
+    "BLOCKED_MALICIOUS": 53,
+    "HANDLED_INTERRUPTION": 28,
+    "ESCALATED_HUMAN_HANDOFF": 31,
+    "RECOVERED_LOW_CONFIDENCE": 107
+  },
+  "details": [
+    {
+      "id": 0,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 1,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 2,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 3,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 4,
+      "traits": [
+        "NOISY",
+        "MALICIOUS"
+      ],
+      "outcome": "BLOCKED_MALICIOUS",
+      "latency_ms": 5,
+      "notes": "Security guardrail triggered"
+    },
+    {
+      "id": 5,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 6,
+      "traits": [
+        "MALICIOUS",
+        "EMOTIONAL"
+      ],
+      "outcome": "BLOCKED_MALICIOUS",
+      "latency_ms": 5,
+      "notes": "Security guardrail triggered"
+    },
+    {
+      "id": 7,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 8,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 9,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 10,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 11,
+      "traits": [
+        "INTERRUPTED"
+      ],
+      "outcome": "HANDLED_INTERRUPTION",
+      "latency_ms": 1200,
+      "notes": "System stopped generation mid-stream"
+    },
+    {
+      "id": 12,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 13,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 14,
+      "traits": [
+        "NOISY",
+        "INTERRUPTED"
+      ],
+      "outcome": "HANDLED_INTERRUPTION",
+      "latency_ms": 1200,
+      "notes": "System stopped generation mid-stream"
+    },
+    {
+      "id": 15,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 16,
+      "traits": [
+        "EMOTIONAL",
+        "DATA_GAP"
+      ],
+      "outcome": "ESCALATED_HUMAN_HANDOFF",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "HANDOFF"
+    },
+    {
+      "id": 17,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 18,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 19,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 20,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 21,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 22,
+      "traits": [
+        "INTERRUPTED"
+      ],
+      "outcome": "HANDLED_INTERRUPTION",
+      "latency_ms": 1200,
+      "notes": "System stopped generation mid-stream"
+    },
+    {
+      "id": 23,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 24,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 25,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 26,
+      "traits": [
+        "MALICIOUS"
+      ],
+      "outcome": "BLOCKED_MALICIOUS",
+      "latency_ms": 5,
+      "notes": "Security guardrail triggered"
+    },
+    {
+      "id": 27,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 28,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 29,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 30,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 31,
+      "traits": [
+        "MALICIOUS"
+      ],
+      "outcome": "BLOCKED_MALICIOUS",
+      "latency_ms": 5,
+      "notes": "Security guardrail triggered"
+    },
+    {
+      "id": 32,
+      "traits": [
+        "MALICIOUS",
+        "EMOTIONAL"
+      ],
+      "outcome": "BLOCKED_MALICIOUS",
+      "latency_ms": 5,
+      "notes": "Security guardrail triggered"
+    },
+    {
+      "id": 33,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 34,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 35,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 36,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 37,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 38,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 39,
+      "traits": [
+        "NOISY"
+      ],
+      "outcome": "RECOVERED_LOW_CONFIDENCE",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "CLARIFICATION"
+    },
+    {
+      "id": 40,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 41,
+      "traits": [
+        "NOISY"
+      ],
+      "outcome": "RECOVERED_LOW_CONFIDENCE",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "CLARIFICATION"
+    },
+    {
+      "id": 42,
+      "traits": [
+        "NOISY"
+      ],
+      "outcome": "RECOVERED_LOW_CONFIDENCE",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "CLARIFICATION"
+    },
+    {
+      "id": 43,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 44,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 45,
+      "traits": [
+        "EMOTIONAL",
+        "DATA_GAP"
+      ],
+      "outcome": "ESCALATED_HUMAN_HANDOFF",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "HANDOFF"
+    },
+    {
+      "id": 46,
+      "traits": [
+        "INTERRUPTED"
+      ],
+      "outcome": "HANDLED_INTERRUPTION",
+      "latency_ms": 1200,
+      "notes": "System stopped generation mid-stream"
+    },
+    {
+      "id": 47,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 48,
+      "traits": [
+        "EMOTIONAL"
+      ],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Frustrated",
+      "response_type": "DIRECT_ANSWER"
+    },
+    {
+      "id": 49,
+      "traits": [],
+      "outcome": "SUCCESS",
+      "latency_ms": 0.0,
+      "emotion_detected": "Neutral",
+      "response_type": "DIRECT_ANSWER"
+    }
+  ]
+}

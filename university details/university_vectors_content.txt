@@ -1,0 +1,416 @@
+Programme: BA-B Ed (Integrated) | Eligibility: 10+2 in any stream with minimum 50% marks | Intake: 50 | Level: UG | Medium: English
+
+Programme: B Ed (Bachelor of Education) | Eligibility: Graduation in any stream with minimum 50% marks | Intake: 100 | Level: UG | Medium: English
+
+Programme: M Ed (Master of Education) | Eligibility: B.Ed./B.A.B.Ed.(Int.)/B.Sc. B.Ed. (Int.)/B.EP,Ed./D,EI,E d. with graduation, with minimum 50% marks. | Intake: 50 | Level: PG | Medium: English
+
+Programme: BSc B Ed (Integrated) | Eligibility: 10+2 in Science Stream with PCB / PCM with minimum 50% marks | Intake: 50 | Level: UG | Medium: English
+
+Programme: Pharm D (Doctor of Pharmacy) | Eligibility: 10+2 in Science stream with PCB/M or D. Pharm. Or B. Pharm. and minimum 50% marks in aggregate. | Intake: 30 | Level: PG | Medium: English
+
+Programme: Bachelor of Optometry | Eligibility: 10+2 in Science stream with PCB / PCM and minimum 50% marks in aggregate. | Intake: 80 | Level: UG | Medium: English
+
+Programme: Bachelor of Physiotherapy (BPT) | Eligibility: 10+2 in Science stream with PCB and English subject and minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: BCA in Mobile Application & Web Technologies - (Offered till 2023-2024) | Eligibility: 10+2 in any Stream with minimum 50% marks in aggregate. | Intake: 150 | Level: UG | Medium: English
+
+Programme: BBA in International Business & Entrepreneurship - (Offered till 2023-2024) | Eligibility: 10+2 in any Stream with minimum 50% marks in aggregate. | Intake: 240 | Level: UG | Medium: English
+
+Programme: BCom (Hons.) - (Offered till 2023-2024) | Eligibility: 10+2 in commerce / science stream with minimum 60% marks | Intake: 150 | Level: UG | Medium: English
+
+Programme: BCom (Hons) in Financial Markets - (Offered till 2023-2024) | Eligibility: 10+2 in any Stream with minimum 50% marks in aggregate. | Intake: 120 | Level: UG | Medium: English
+
+Programme: MBA in Supply Chain Management & Logistic - (Offered till 2023-2024) | Eligibility: 10+2 in any stream | Intake: 120 | Level: PG | Medium: English
+
+Programme: MBA in Hospital Management (MBA) | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 120 | Level: PG | Medium: English
+
+Programme: BTech CSE- Specialisation in Artificial Intelligence, Machine Learning & Deep Learning | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science ) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech CSE in Cloud Technology & Information Security - (Offered till 2023-2024) | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science ) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech CSE in Data Science - (Offered till 2023-2024) | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science ) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech CSE in Data Science (Collaboration with TCS iON) | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science ) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BSc Computer Science | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 60% marks in aggregate | Intake: 60 | Level: UG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Orthopaedics | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy. | Intake: 20 | Level: PG | Medium: English
+
+Programme: BA LLB (Hons) | Eligibility: 10+2 in any stream with minimum 45% marks | Intake: 120 | Level: UG | Medium: English
+
+Programme: BBA LLB (Hons) | Eligibility: 10+2 in Commerce / Science stream with minimum 45% marks | Intake: 120 | Level: UG | Medium: English
+
+Programme: BCom-LLB (Hons) | Eligibility: 10+2 in Commerce / Science stream with minimum 45% marks | Intake: 120 | Level: UG | Medium: English
+
+Programme: LLM | Eligibility: Graduation in law with minimum 50% marks. | Intake: 30 | Level: PG | Medium: English
+
+Programme: BTech (AICTE Approved) in Mechanical Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech (AICTE Approved) In Civil Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech (AICTE Approved) in Electronics & Communication (EC) Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BTech (AICTE Approved) In Electrical Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: BSc in Medical Lab Techniques | Eligibility: 10+2 in Science stream with PCB & English and minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: BSc in Forensic Science (Honours / Honours with Research) | Eligibility: 10+2 in Science stream with PCM/PCB & English and minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: MSc in Optometry | Eligibility: B.Sc. Optometry/ B.Optom. with compulsory internship or 1 year of clinical experience and minimum 50% marks in aggregate | Intake: 40 | Level: PG | Medium: English
+
+Programme: MSc in Radiological Imaging Techniques | Eligibility: BRIT / B.Sc. Radiography / BMIT / BM-RIT with compulsory internship or one year of clinical experience | Intake: 40 | Level: PG | Medium: English
+
+Programme: BSc (Hons.) Agriculture (ICAR-Accredited) | Eligibility: Intermediate / 10+2 with PCM/PCB/PCMB/Agriculture from a recognised Board /University with minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: MSc - Agronomy | Eligibility: B.Sc. in Agriculture with 50% marks | Intake: 10 | Level: PG | Medium: English
+
+Programme: BFA  (Honours / Honours with Research) | Eligibility: 10+2 in any stream with minimum 50% marks in aggregate | Intake: 40 | Level: UG | Medium: English
+
+Programme: Masters of Fine Arts (MFA) | Eligibility: BFA with minimum 50% in aggregate | Intake: 15 | Level: PG | Medium: English
+
+Programme: MSc in Medical Laboratory Techniques | Eligibility: B.Sc. Medical Lab Techniques / BMLT with compulsory internship or 1 year of clinical exp. and minimum 50% marks in aggregate | Intake: 120 | Level: PG | Medium: English
+
+Programme: BPEd | Eligibility: Bachelor degree in Physical Education (BPE/ B.Sc./B.A. in Physical Education) or graduation in any stream with Physical Education as an elective subject with minimum 50% marks in aggregate. (45% for participants to national/ inter university sports competitions recognized by AIU or IOA and for in-service trained physical education teachers/ coaches with 3 years teaching experience) | Intake: 50 | Level: UG | Medium: English
+
+Programme: MPEd | Eligibility: B.P.Ed. / B.Sc. (Health & Physical Education) with minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: BPES (Honours / Honours with Research) | Eligibility: 10+2 in any stream with minimum 50% marks | Intake: 50 | Level: UG | Medium: English
+
+Programme: MSc in Forensic Science | Eligibility: B.Sc. / B.Sc. (Forensic Science) and minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: BCom in Fintech & Blockchain Technologies with Whizhack Technologies | Eligibility: 10+2 in commerce / Science Stream with minimum 50% marks and minimum 50% marks in aggregate | Intake: 90 | Level: UG | Medium: English
+
+Programme: BBA (Honours / Honours with Research)  in Data Analytics | Eligibility: 10+2 in commerce / Science Stream with minimum 50% marks and minimum 50% marks in aggregate | Intake: 90 | Level: UG | Medium: English
+
+Programme: BDS (Bachelor of Dental Surgery) | Eligibility: 10+2 With minimum 50% marks in PCB and pass marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: MDS in Conservation Dentistry & Endodontics | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Oral & Maxillofacial Surgery | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Orthodontics & Dentofacial Orthopedics | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS In Prosthodontics and Crown & Bridge | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Paedodontics & Preventive Dentistry | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Periodontology | Eligibility: BDS | Intake: 3 | Level: PG | Medium: English
+
+Programme: B.com (Hons) with Research in Finance | Eligibility: 10+2 in commerce / Science Stream and minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: B.Com (Hons.) with Research in Business Analytics | Eligibility: 10+2 in commerce / Science Stream and minimum 50% marks in aggregate | Intake: 250 | Level: UG | Medium: English
+
+Programme: MDS in Public Health Dentistry | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Oral Medicine and Radiology | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: MDS in Oral Maxillofacial Pathology & oral Microbiology | Eligibility: BDS | Intake: 5 | Level: PG | Medium: English
+
+Programme: BSc in Radiological Imaging Techniques | Eligibility: 10+2 in Science stream with PCB & English and minimum 50% marks in aggregate | Intake: 120 | Level: UG | Medium: English
+
+Programme: BSc Medical in Anatomy | Eligibility: 10+2 in Science stream with PCB & English and minimum 50% marks in aggregate | Intake: 10 | Level: UG | Medium: English
+
+Programme: Post Basic BSc in Nursing | Eligibility: 10+2 with GNM and minimum 50% marks in aggregate | Intake: 100 | Level: UG | Medium: English
+
+Programme: BSc Medical in Physiology | Eligibility: 10+2 in Science stream with PCB & English and minimum 50% marks in aggregate | Intake: 10 | Level: UG | Medium: English
+
+Programme: BSc in Nursing | Eligibility: 10+2 in PCB with English and minimum 50% aggregate marks in PCB | Intake: 100 | Level: UG | Medium: English
+
+Programme: MSc in Medical Surgical Nursing | Eligibility: B.Sc. Nursing/Post Basic B.Sc. Nursing with 1 year experience and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: MSc in Paediatric Nursing | Eligibility: B.Sc. Nursing/Post Basic B.Sc. Nursing with 1 year experience and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: MSc in Obstetrics & Gynaecology Nursing | Eligibility: B.Sc. Nursing/Post Basic B.Sc. Nursing with 1 year experience and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: BSc Medical in Biochemistry | Eligibility: 10+2 With minimum 50% marks in PCB and pass marks in English | Intake: 10 | Level: UG | Medium: English
+
+Programme: MSc in Community Health Nursing | Eligibility: B.Sc. Nursing/Post Basic B.Sc. Nursing with 1 year experience and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: MSc in Psychiatry Nursing | Eligibility: B.Sc. Nursing/Post Basic B.Sc. Nursing with 1 year experience and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Neurosciences | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy. | Intake: 40 | Level: PG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Cardiopulmonary | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy. | Intake: 40 | Level: PG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Sports | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy. | Intake: 40 | Level: PG | Medium: English
+
+Programme: MSc Medical in Anatomy | Eligibility: MBBS / BDS / BUMS / BHMS / BAMS / B.Sc. (Nursing) / BMLT / B.Pharm. / BPT / B.Sc. (Forensic Science) / B.Sc. (Biology) / B. Sc. in relevant discipline / B.Tech.-Biotechnology (For M.Sc. Biochemistry) | Intake: 50 | Level: PG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Gynaecology | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy. | Intake: 40 | Level: PG | Medium: English
+
+Programme: MSc Medical in Physiology | Eligibility: MBBS/BDS/BUMS/BHMS/BAMS /B.Sc.(Nursing)/BMLT/B.Pharm/ BPT/ B.Sc. (Forensic Science)/ B.Sc.(Biology) B.Sc.in relevant discipline/ B.Tech Biotechnology (for M.Sc. Biochemistry) | Intake: 50 | Level: PG | Medium: English
+
+Programme: MSc Medical in Biochemistry | Eligibility: MBBS / BDS / BUMS / BHMS / BAMS / B.Sc. (Nursing) / BMLT / B.Pharm. / BPT / B.Sc. (Forensic Science) / B.Sc. (Biology) / B. Sc. in relevant discipline / B.Tech.-Biotechnology (For M.Sc. Biochemistry) | Intake: 50 | Level: PG | Medium: English
+
+Programme: MSc Medical in Microbiology | Eligibility: MBBS/BDS/BUMS/BHMS/BAMS /B.Sc.(Nursing)/BMLT/B.Pharm/ BPT/ B.Sc. (Forensic Science)/ B.Sc.(Biology) B.Sc.in relevant discipline/ B.Tech Biotechnology (for M.Sc. Biochemistry) | Intake: 50 | Level: PG | Medium: English
+
+Programme: MSc Medical in Pharmacology | Eligibility: MBBS/BDS/BUMS/BHMS/BAMS /B.Sc.(Nursing)/BMLT/B.Pharm/ BPT/ B.Sc. (Forensic Science)/ B.Sc.(Biology) B.Sc.in relevant discipline/ B.Tech Biotechnology (for M.Sc. Biochemistry) | Intake: 10 | Level: PG | Medium: English
+
+Programme: MSc Plant Pathology | Eligibility: B.Sc. in Agriculture with 50% marks | Intake: 50 | Level: PG | Medium: English
+
+Programme: MSc Soil Science | Eligibility: B.Sc. in Agriculture with 50% marks | Intake: 50 | Level: PG | Medium: English
+
+Programme: BSc Computer Science (Hons / Hons with Research) | Eligibility: 10+2 with Physics, Maths & Chemistry or Computer Sci.) with minimum 60% marks in aggregate | Intake: 50 | Level: UG | Medium: English
+
+Programme: MTech (Computer Science & Engineering) | Eligibility: B.Tech. (relevant field) / M.Sc.(CS / IT / Physics / Maths) / MCA with minimum 50% aggregate marks | Intake: 50 | Level: PG | Medium: English
+
+Programme: BTech in Computer Science & Engineering with specialisation in Data Science (In collaboration with TCS- iON) | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: MCA (Master of Computer Applications) | Eligibility: • Passed BCA/Bachelor Degree in Computer Science Engg. or equivalent degree and minimum 50% marks in aggregate OR • Passed B.Sc./B.Com./B.A. with Mathematics at 10+2 level or at Graduation level (with additional bridge course as per norms of the concerned university) and minimum 50% marks in aggregate • Obtained at least 50% marks (45% marks in cases of candidates belonging to reserved category) in the qualifying examination. | Intake: 50 | Level: PG | Medium: English
+
+Programme: BTech Computer Science & Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: BTech Computer and Communication Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: BSc (Animation) / (Hons / Hons with Research) | Eligibility: 10+2 in any stream and minimum 50% marks in aggregate | Intake: 50 | Level: UG | Medium: English
+
+Programme: BTech CSE with specialisation in Cloud & Analytics Platforms (In collaboration with IBM) | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 50 | Level: UG | Medium: English
+
+Programme: BTech ECE-Internet of Things in Collaboration with TCS iON | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: MTech (Master of Technology) in Additive Manufacturing | Eligibility: B.Tech.- Biotechnology Engineering / Instrumentation Engineering / Civil Engineering / Mechanical Engineering / Electrical Engineering / M.Sc. (Physics) / Allied branches of Mechanical Engineering | Intake: 50 | Level: PG | Medium: English
+
+Programme: MTech in Machine Learning & Data Science | Eligibility: B.Tech. (in any discipline)/M.Sc. (Physics/Maths)/MCA with minimum 50% aggregate marks | Intake: 60 | Level: PG | Medium: English
+
+Programme: MTech in Electrical Power and Energy System | Eligibility: B.Tech.- EE / EEE/ EI / Electrical & Computer Engineering / Electrical & Instrumentation Engineering / Electrical & ME / Electrical & Instrumentation Engineering / Allied branches of Electrical Engineering) | Intake: 60 | Level: PG | Medium: English
+
+Programme: M Tech in Structural and Construction Engineering | Eligibility: B.Tech. Civil Engineering/Building & Construction Technology/Civil & Infrastructure Engineering/Alliedbranches of Civil Engineering | Intake: 50 | Level: PG | Medium: English
+
+Programme: Pharm D PB (Post Baccalaureate) | Eligibility: B.Pharm and minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: M Pharm (Master of Pharmacy) in Pharmacology | Eligibility: B.Pharm and minimum 50% marks in aggregate. | Intake: 50 | Level: PG | Medium: English
+
+Programme: M Pharm (Master of Pharmacy) in Pharmacognosy | Eligibility: B.Pharm and minimum 50 % marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: M Pharm (Master of Pharmacy) in Pharmaceutical Analysis | Eligibility: B.Pharm and minimum 50 % marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: Master of Business Administration  (Specialization in Agri-Business Management) | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: BBA (Hons) (Honours / Honours with Research) | Eligibility: 10+2 in any stream and minimum 50% marks in aggregate | Intake: 50 | Level: UG | Medium: English
+
+Programme: BCom (Pass) | Eligibility: 10+2 in commerce / Science Stream with minimum 50% marks and minimum 50% marks in aggregate | Intake: 60 | Level: UG | Medium: English
+
+Programme: MBBS (Bachelor of Medicine, Bachelor of Surgery) | Eligibility: 10+2 With minimum 50% marks in PCB and pass marks in English | Intake: 250 | Level: UG | Medium: English
+
+Programme: MS (Master of Science) in ENT/Oto-Rhinlaryngology | Eligibility: MBBS | Intake: 4 | Level: PG | Medium: English
+
+Programme: MS (Master of Science) in General Surgery | Eligibility: MBBS | Intake: 15 | Level: PG | Medium: English
+
+Programme: MS (Master of Science) in Ophthalomology | Eligibility: MBBS | Intake: 4 | Level: PG | Medium: English
+
+Programme: MS (Master of Science) in Orthopaedics | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MS (Master of Science) in Obstetrics and Gynaecology | Eligibility: MBBS | Intake: 10 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Radio-Diagnosis/Radiology | Eligibility: MBBS | Intake: 12 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Dermatology, Venereology and Leprosy | Eligibility: MBBS | Intake: 4 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in General Medicine | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Paediatrics | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Respiratory Medicine/TB & Chest | Eligibility: MBBS | Intake: 4 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Psychiatry | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Anesthesiology | Eligibility: MBBS | Intake: 11 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Pathology | Eligibility: MBBS | Intake: 8 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Biochemistry | Eligibility: MBBS | Intake: 2 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Microbiology | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Community Medicine | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Pharmacology | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Anatomy | Eligibility: MBBS | Intake: 50 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Physiology | Eligibility: MBBS | Intake: 4 | Level: PG | Medium: English
+
+Programme: MD (Doctor of Medicine) in Forensic Medicine | Eligibility: MBBS | Intake: 10 | Level: PG | Medium: English
+
+Programme: BPharm (Bachelor of Pharmacy) | Eligibility: 10+2 in Science stream with PCB/M and minimum 50% marks in aggregate | Intake: 50 | Level: UG | Medium: English
+
+Programme: Master of Physiotherapy (MPT) in Paediatrics | Eligibility: B.Sc. (PT) / BPT / BPT through Bridge Course or through Lateral Entry with minimum 50% of marks in aggregate and minimum of 6 months of compulsory rotatory internship in Physiotherapy | Intake: 40 | Level: PG | Medium: English
+
+Programme: BElEd (Bachelor of Elementary Education) | Eligibility: 10+2 in any Stream with minimum 50% marks in aggregate. | Intake: 50 | Level: UG | Medium: English
+
+Programme: MBA-(Corporate) - (Offered till 2023 - 2024) | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: BCA (Hons / Hons with Research) | Eligibility: 10+2 in any stream  and minimum 50%  marks in aggregate. | Intake: 120 | Level: UG | Medium: English
+
+Programme: BBA (Hons) with Research | Eligibility: 10+2 in any stream and minimum  50% marks in aggregate. | Intake: 50 | Level: UG | Medium: English
+
+Programme: M Pharm (Master of Pharmacy) in Pharmaceutics | Eligibility: B.Pharm and minimum 50% marks in aggregate. | Intake: 50 | Level: PG | Medium: English
+
+Programme: BTech Mechatronics in Collaboration with TCS iON | Eligibility: na | Intake: 100 | Level: UG | Medium: English
+
+Programme: MSc (Master of Science) in Artificial Intelligence (In collaboration with Aivancity, France) | Eligibility: Graduation in Computer Science/Computer Application/I.T/CSE With Minimum 60% Marks | Intake: 50 | Level: PG | Medium: English
+
+Programme: MSc (Master of Science) in Data Science (In collaboration with Aivancity, France) | Eligibility: Graduation in Computer Science/Computer Application/I.T/CSE With Minimum 60% Marks | Intake: 100 | Level: PG | Medium: English
+
+Programme: BTech (AICTE Approved) in Computer Science & Engineering | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: Master of Business Administration (MBA) with Dual Specialisation | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: BTech CSE in Cloud Technology and Information Security | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 100 | Level: UG | Medium: English
+
+Programme: B.Com (Honours / Honours with Research) | Eligibility: 10+2 in commerce / Science Stream and minimum 50% marks in aggregate | Intake: 60 | Level: UG | Medium: English
+
+Programme: MBA in Logistics and Supply Chain Management | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 60 | Level: PG | Medium: English
+
+Programme: BTech CSE in Data Science | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 60 | Level: UG | Medium: English
+
+Programme: MBA in Corporate with Global Exposure | Eligibility: Graduation in any stream and minimum 50% marks in aggregate | Intake: 50 | Level: PG | Medium: English
+
+Programme: BBA (Honours / Honours with Research) in International Business and Entrepreneurship | Eligibility: 10+2 in commerce / Science Stream with minimum 50% marks and minimum 50% marks in aggregate. | Intake: 100 | Level: UG | Medium: English
+
+Programme: BTech CSE in Cyber Security | Eligibility: 10+2 with Physics, Maths & Chemistry (or Computer Science) with minimum 50% marks and passing marks in English | Intake: 120 | Level: UG | Medium: English
+
+C: General Q: What is the objective behind TMU's scholarship programs? A: At TMU, scholarships aim to reward meritorious and deserving students to ensure that financial constraints do not hinder their pursuit of higher education.
+
+C: General Q: How many scholarships or concessions can a student avail in total? A: A student can avail the Academic Scholarship plus a maximum of three additional scholarships/concessions.
+
+C: General Q: Is there a fee concession for paying the course fee annually? A: Yes, candidates who pay the full annual fee at once receive an additional 5% concession on net tuition fees. This is not available for half-yearly payments.
+
+C: Jain Studies Scholarship Q: Does TMU offer scholarships for Jain Studies? A: Yes, TMU offers special scholarships for students enrolled in various programs if they pursue Jain Studies.
+
+C: Jain Studies Scholarship Q: What is the fee waiver provided under the Jain Studies scholarship? A: Eligible students can get 50% tuition fee waiver for specific programs, 20% for others, and hostel lodging fee waivers (30% common, 15% attached bathroom).
+
+C: Academic Scholarships Q: Are there scholarships based on marks in qualifying exams? A: Yes. Students securing 60–69.9% get 10%, 70–79.9% get 15%, 80–89.9% get 25%, and 90% & above get 50%.
+
+C: Academic Scholarships Q: Is the entry-level scholarship applicable to all programs? A: No, it excludes D.El.Ed. (BTC), collaborative programs, Dental, Medical, Allied Programs, and Agriculture.
+
+C: Academic Scholarships Q: What scholarships are available for B.Tech CSE (IBM collaboration)? A: Students securing 70–79.99% in 10+2 get 10%, 80–89.99% get 20%, 90% & above get 25%.
+
+C: Academic Scholarships Q: Are there scholarships based on CUET scores? A: Yes. CUET scores offer: 60–69.99% – 10%, 70–79.99% – 15%, 80–89.99% – 25%, 90% & above – 50%.
+
+C: Competitive Exams Q: What scholarships are available based on JEE (Main) and UP-CET ranks for B.Tech? A: JEE (Main) ranks up to 15,000: 90%, 15,001–25,000: 50%, 25,001–50,000: 20%; similar for UP-CET.
+
+C: Competitive Exams Q: What scholarships are available for MBA/MCA aspirants with CAT/MAT/CMAT scores? A: 90–95 percentile: 20%, 96–97 percentile: 40%, 98 & above: 100%.
+
+C: Alumni Scholarships Q: Are there scholarships for TMU alumni or Madan Swarup Inter College pass-outs? A: Yes. 60–69.9%: 15%, 70–79.9%: 20%, 80–89.9%: 30%, 90% & above: 50%.
+
+C: Chancellor & Sibling Q: Do wards of TMU staff receive any scholarships? A: Yes. Chancellor’s Scholarship provides 20% tuition fee waiver per year for the entire program.
+
+C: Chancellor & Sibling Q: Is there a sibling scholarship available? A: Yes. A 10% tuition fee discount is provided to the sibling with the lower tuition fee, applicable only in the first year.
+
+C: Sports Scholarships Q: Are there scholarships for national or international level sportspersons? A: Yes. Olympic/World Level Gold: 100%, Silver/Bronze: 80%, Inter-varsity Zonal Medalists: 60%, Recognized national level participation: 15%.
+
+C: Sports Scholarships Q: Are there scholarships for district or state-level players? A: Yes. Cluster/State participation: 10%, District or trial-based players: 5%.
+
+C: Sports Scholarships Q: How are sports scholarships awarded? A: A Selection Committee reviews applications and trials to finalize awards.
+
+C: Polytechnic to B.Tech Q: Are existing Polytechnic students eligible for a B.Tech scholarship? A: Yes. They receive a 20% tuition fee discount per year for the entire B.Tech duration. Applies only to non-Jain students.
+
+C: Differently-Abled Q: Are there scholarships for differently-abled students? A: Yes. Awarded on a case-by-case basis for the full program, based on the level of disability and valid certificate.
+
+C: Restrictions & Rules Q: Can multiple scholarships be availed at once? A: A candidate can avail a maximum of 3 additional scholarships/concessions in addition to the Academic Scholarship.
+
+C: Restrictions & Rules Q: Are scholarships available for programs with duration of one year or less? A: No, such programs are not eligible for scholarships.
+
+C: Scholarship Calculation Q: How is the percentage calculated for scholarship eligibility? A: Percentage is computed based on English + 3 main subjects. Subject combinations vary by program.
+
+Q: What is Teerthanker Mahaveer University (TMU)? A: Teerthanker Mahaveer University is a renowned multidisciplinary private university established by Act No. 30 of 2008 of the Government of Uttar Pradesh and approved by the University Grants Commission (UGC) in October 2008. Located in Moradabad, Uttar Pradesh, it is committed to academic excellence, inspired by the ideals of Lord Mahaveer—Right Philosophy, Right Knowledge, and Right Conduct.
+
+Q: Where is TMU located? A: TMU is located in Moradabad, Uttar Pradesh, just 144 km from New Delhi, along National Highway 9.
+
+Q: What kind of programmes does TMU offer? A: TMU offers undergraduate (UG), postgraduate (PG), and doctoral (Ph.D.) programmes in Medical, Dental, Nursing, Pharmacy, Paramedical Sciences, Physiotherapy, Engineering, Management, Law, Education, Agriculture, Fine Arts, Computer Sciences, Physical Education, Jain Studies, and more.
+
+Q: Is TMU approved by the UGC? A: Yes, TMU is approved by the University Grants Commission (UGC), vide letter No. F. 9-31/2008 (CPP-1), dated October 2008.
+
+Q: What are the unique features of TMU? A: TMU offers: Over 800 faculty members, 16,000+ students, 2,800+ patents, 85% placement rate, Wi-Fi enabled smart campus, research-oriented environment, advanced laboratories and hospital facilities, indoor/outdoor stadiums, gymnasiums, and e-lobby (food court), and 24/7 campus surveillance with 3600+ night vision cameras.
+
+Q: Does TMU focus on research? A: Yes, TMU is a research-oriented university with a strong focus on innovation and development, including 2800+ patents filed across various disciplines.
+
+Q: What kind of campus facilities are available? A: TMU provides medical care, hostel accommodation, faculty residences, gymnasiums, indoor/outdoor stadiums, food courts, and 24/7 surveillance system.
+
+Q: How many colleges does TMU have? A: TMU has more than 15 colleges offering specialized education in diverse fields such as Medical, Dental, Pharmacy, Nursing, Engineering, Law, Education, Agriculture, and more.
+
+Q: What courses are offered at the Medical College? A: Teerthanker Mahaveer Medical College & Research Centre offers MBBS, MD/MS, M.Sc. Medical, and Ph.D. programmes.
+
+Q: What programmes are available in the Dental College? A: The Dental College offers BDS, MDS, and Ph.D. programmes.
+
+Q: What is special about TMIMT College of Management? A: Established in 2001, TMIMT offers BBA, MBA, B.Com., and Ph.D. programmes with a strong emphasis on leadership and industry-readiness.
+
+Q: What kind of programmes are available in the Nursing College? A: The College of Nursing offers diploma, undergraduate, and postgraduate nursing programmes preparing students for clinical and administrative roles in healthcare.
+
+Q: What does the College of Pharmacy offer? A: It provides diploma, UG, PG, and Ph.D. courses in pharmaceutical sciences focused on patient care and healthcare systems.
+
+Q: What is offered in the Engineering College? A: The College of Engineering offers AICTE-approved B.Tech, M.Tech, and Ph.D. programmes in various disciplines including Computer Science, Civil, Mechanical, and Electrical Engineering.
+
+Q: What is the focus of the College of Paramedical Sciences? A: This college offers courses like BMLT, DMLT, X-Ray Technology, Forensic Science, and Optometry for pre-hospital and lab-based careers.
+
+Q: What is the mission of the Centre for Jain Studies? A: The Centre imparts moral education, encourages comparative philosophical studies, and supports research in Jainism and other spiritual traditions.
+
+Q: How can I apply to TMU? A: You can apply online through the TMU website by selecting your desired course, filling the application form, and submitting the required documents and fees.
+
+Q: What is the placement record of TMU? A: TMU boasts a strong placement record with 85% of eligible students placed across reputed organizations through campus drives.
+
+Q: Does TMU provide hostel accommodation? A: Yes, TMU provides separate, well-furnished hostels for boys and girls with 24/7 security, Wi-Fi, mess services, and common rooms.
+
+Q: What sports and fitness facilities are available on campus? A: The campus includes indoor stadiums, outdoor sports fields, modern gymnasiums for both genders, and recreational spaces.
+
+Q: How secure is the TMU campus? A: TMU ensures round-the-clock safety with more than 3600 high-resolution night vision CCTV cameras and a dedicated security team.
+
+Q: Is the campus technology-enabled? A: Yes, the TMU campus is Wi-Fi enabled and uses smart classroom technologies for enhanced learning experiences.
+
+Q: Is TMU accredited by any national regulatory bodies? A: Yes, TMU is approved by the University Grants Commission (UGC) and its various constituent colleges are recognized by statutory bodies such as the Medical Council of India (MCI), Dental Council of India (DCI), Pharmacy Council of India (PCI), Indian Nursing Council (INC), Bar Council of India (BCI), and National Council for Teacher Education (NCTE).
+
+Q: Are the programmes at TMU recognized? A: All academic programmes at TMU are duly approved by the respective regulatory authorities such as UGC, MCI, DCI, PCI, INC, BCI, AICTE, and NCTE, ensuring quality and recognition nationwide.
+
+Q: Is TMU NAAC accredited? A: Yes, Teerthanker Mahaveer University is accredited by the National Assessment and Accreditation Council (NAAC), a testament to its academic and administrative excellence.
+
+Q: Does TMU follow the norms of professional councils? A: Yes, TMU strictly adheres to the academic and professional standards set by statutory councils like MCI, DCI, PCI, INC, AICTE, and BCI for its various programmes.
+
+Q: What is the significance of TMU receiving the ‘Gold Band in Sustainability Institutions of India’? A: It recognizes TMU's top-tier performance in sustainable education practices and infrastructure.
+
+Q: Why was TMU awarded the ‘National Education Excellence Award’? A: TMU received this for its exemplary contributions in providing quality and inclusive education.
+
+Q: What is the AITMC award for ‘Best Institute for Outstanding Management’? A: This acknowledges TMU's strong leadership and excellence in institutional governance.
+
+Q: What does the ASSOCHAM’s ‘GEM Certified Sustainable Building’ award mean for TMU? A: It confirms TMU's eco-friendly, energy-efficient campus meeting green building standards.
+
+Q: What is the ‘Leadership in Education Award’ awarded to TMU? A: This award honors TMU’s forward-thinking leadership in higher education.
+
+Q: What is the importance of the CSI Accreditation for TMU? A: Granted by the Computer Society of India, it signifies TMU’s strength in IT and computing education.
+
+Q: Why did TMU receive the ‘Excellence Award for Outstanding Management’? A: It was awarded for demonstrating superior strategic and academic management across the university.
+
+Q: What does being rated ‘A++ among Top B-Schools in India’ mean for TMU? A: It highlights the high academic and placement standards of TMU's business school.
+
+Q: What is the ‘Excellence in OBE (Outcome-Based Education)’ award received by TMU? A: It reflects TMU’s effective implementation of Outcome-Based learning methods and student performance metrics.
+
+Q: What does the ‘Rated A+ Certification for Top B-Schools’ signify? A: It confirms TMU's business school ranks among the best in terms of curriculum and career readiness.
+
+Q: What does TMU's NAAC ‘A’ and ‘B++’ accreditation indicate? A: It demonstrates TMU's compliance with national quality standards in higher education.
+
+Q: What is the NBA Accreditation received by TMU? A: NBA Accreditation signifies the high quality of TMU’s engineering and professional programs.
+
+Q: Why is NABL Accreditation important for TMU? A: It confirms that TMU’s labs meet the standards of technical competence and quality.
+
+Q: What does ISO 9001:2015 Certification mean for TMU? A: It verifies that TMU has efficient quality management systems in place.
+
+Q: What does it mean for TMU to be placed in the ‘Diamond Band for Outcome-Based Education Rankings 2024’? A: It signifies TMU’s top-tier commitment to learning outcomes and continuous academic improvement.
+
+Q: Why was TMU honored with the ‘Innovation in Education’ Award by the Government of India? A: For fostering innovation through research, teaching methodologies, and student development.
+
+Q: What is the importance of UGC Approval for TMU? A: It ensures TMU is officially recognized and its degrees are valid across India and abroad.
+
+Q: What does TMU’s membership in the United Nations Academic Impact (UNAI) mean? A: TMU aligns its mission with UN goals like human rights, sustainability, and global citizenship.
+
+Q: What is SIRO Recognition and why is it important for TMU? A: SIRO status allows TMU to conduct government-approved scientific and industrial research.
+
+Q: What does the ‘5th Best B-School in North India’ ranking mean for TMU? A: It reflects TMU's excellence in management education and industry interface in the northern region.
+
+Q: Why is TMU a member of the Institution of Electronics and Telecommunication Engineers (IETE)? A: To promote high standards in electronics and telecom education through collaboration and research.
+
+Q: What does TMU’s membership in the Indian Concrete Institute (ICI) signify? A: It enables TMU’s civil engineering programs to stay aligned with industry advancements in construction and design.
+
+Q: What does the ‘Entrepreneurial Success Recognition’ award mean for TMU? A: It highlights TMU’s commitment to supporting student-led startups and entrepreneurial ecosystems.
+
+Q: What was the ‘Best Institution of the Year 2013’ award given to TMU for? A: For excellence across education, research, and infrastructure at a national level.
+

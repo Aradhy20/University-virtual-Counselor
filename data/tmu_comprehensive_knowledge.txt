@@ -1,0 +1,325 @@
+# TMU COMPREHENSIVE KNOWLEDGE BASE
+# Scraped from https://www.tmu.ac.in (March 2026)
+# Used by RAG system for Aditi's accurate responses
+
+=== UNIVERSITY OVERVIEW ===
+Teerthanker Mahaveer University (TMU) is a top private university located at N.H.-9, Delhi Road, Moradabad - 244001, Uttar Pradesh, India.
+TMU stands for Teerthanker Mahaveer University.
+TMU has a lush green campus spanning over 140 acres in Moradabad, Uttar Pradesh.
+TMU was established under the aegis of the Digamber Jain community.
+TMU has 14 on-campus colleges and independent departments.
+TMU offers over 150 programmes at diploma, undergraduate, postgraduate, and doctoral levels.
+TMU has over 28,000 alumni worldwide.
+TMU employs 1,000+ dedicated faculty and staff members.
+Approximately 3 hours from Delhi by road. Well connected by rail and road.
+Official website: www.tmu.ac.in
+Admissions Contact Number (Toll-Free): 1800-270-1490
+Admissions Email: admissions@tmu.ac.in
+University Email: university@tmu.ac.in
+Address: N.H.-9, Delhi Road, Moradabad - 244001, Uttar Pradesh
+
+=== ACCREDITATIONS AND RANKINGS ===
+NAAC Grade: 'A' Grade (National Assessment and Accreditation Council)
+UGC Approved: Yes, University Grants Commission recognized
+AICTE Approved: Technical programmes approved by AICTE
+NBA Accredited: Selected programmes
+ICAR Accredited: Agriculture programmes accredited by Indian Council of Agricultural Research
+NIRF Innovation Category: Rank band 51-100
+Outlook India Ranking: 45th among Top 50 State Private Universities
+United Nations Academic Impact (UNAI): Affiliated member
+85% outstanding placement rate (2022-23)
+Highest package offered: 60 LPA (Lakhs Per Annum)
+
+=== PROGRAMMES OFFERED ===
+
+ENGINEERING (B.Tech, M.Tech):
+- B.Tech Computer Science & Engineering (CSE)
+- B.Tech CSE Specialisation in Artificial Intelligence & Blockchain
+- B.Tech CSE in Cloud Technology and Information Security
+- B.Tech CSE in Cyber Security
+- B.Tech CSE in Data Science
+- B.Tech CSE Specialisation in AI, Machine Learning & Deep Learning
+- B.Tech Civil Engineering (AICTE Approved)
+- B.Tech Electrical Engineering (AICTE Approved)
+- B.Tech Electronics & Communication Engineering (ECE) (AICTE Approved)
+- B.Tech Mechanical Engineering (AICTE Approved)
+- M.Tech Computer Science & Engineering
+- M.Tech in Machine Learning & Data Science
+- M.Tech in Additive Manufacturing
+- M.Tech in Electrical Power and Energy System
+- M.Tech in Structural and Construction Engineering
+Eligibility for B.Tech: Minimum 60% in PCM (Physics, Chemistry, Mathematics) in Class 12.
+Entrance: JEE Main scores accepted. TMU also has its own entrance test.
+
+COMPUTER SCIENCE:
+- BCA (Hons / Hons with Research)
+- BSc Computer Science (Hons / Hons with Research)
+- BSc Animation (Hons / Hons with Research)
+- MCA (Master of Computer Applications)
+- MSc Artificial Intelligence (In collaboration with Aivancity, France)
+- MSc Data Science (In collaboration with Aivancity, France)
+- MTech Computer Science & Engineering
+
+MANAGEMENT:
+- BBA (Hons / Hons with Research)
+- BBA in Data Analytics (Hons / Hons with Research)
+- BBA in International Business and Entrepreneurship (Hons / Hons with Research)
+- B.Com (Honours / Honours with Research)
+- MBA (Dual Specialisation) - Marketing, Finance, HR, Operations, Analytics
+- MBA in Hospital Management
+- MBA in Logistics and Supply Chain Management
+- MBA in Agri-Business Management
+Eligibility for BBA: Pass Class 12 from any stream with minimum 50% marks.
+MBA Placement: Average 6-8 LPA. Top companies recruit every year.
+
+MEDICAL:
+- MBBS (Bachelor of Medicine, Bachelor of Surgery) — Requires NEET
+- MD in Anatomy, Anesthesiology, Biochemistry, Community Medicine, Dermatology, Forensic Medicine, Microbiology, Pathology, Pharmacology, Physiology, Psychiatry, Radiodiagnosis, ENT, Ophthalmology, Pediatrics, and more
+- BSc Medical in Anatomy, Biochemistry, Physiology
+MBBS Fees: Approximately 15 lakh per year. Requires NEET score.
+
+DENTAL:
+- BDS (Bachelor of Dental Surgery) — Fees: approximately 8 lakh per year
+- MDS in Conservation Dentistry & Endodontics
+- MDS in Oral & Maxillofacial Surgery
+- MDS in Orthodontics & Dentofacial Orthopedics
+- MDS in Periodontology
+- MDS in Public Health Dentistry
+- MDS in Prosthodontics and Crown & Bridge
+- MDS in Oral Medicine and Radiology
+- MDS in Paedodontics & Preventive Dentistry
+- MDS in Oral Maxillofacial Pathology & Oral Microbiology
+
+NURSING:
+- B.Sc Nursing — Fees approximately 1.2 lakh per year. Clinical training at TMU hospital.
+- M.Sc Nursing (various specialisations)
+- Post-Basic B.Sc Nursing
+
+PHARMACY:
+- D.Pharm (Diploma in Pharmacy)
+- B.Pharm (Bachelor of Pharmacy)
+- M.Pharm (various specialisations)
+- Pharm.D (Doctor of Pharmacy)
+
+LAW:
+- BA LLB (Hons) — 5-year integrated programme
+- BBA LLB (Hons) — 5-year integrated programme
+- LLM (Master of Laws)
+TMU Law College has a well-equipped Moot Court for practical legal training. Law students win national competitions.
+
+AGRICULTURE:
+- BSc (Hons.) Agriculture — ICAR Accredited, 4 years
+- MSc in Agronomy
+
+EDUCATION:
+- B.Ed (Bachelor of Education)
+- BElEd (Bachelor of Elementary Education)
+- M.Ed (Master of Education)
+
+FINE ARTS:
+- BFA (Hons / Hons with Research)
+- MFA (Masters of Fine Arts)
+
+PHYSIOTHERAPY:
+- BPT (Bachelor of Physiotherapy)
+- MPT (Master of Physiotherapy)
+
+PARAMEDICAL:
+- BMLT (Bachelor of Medical Lab Technology)
+- BMRIT (Bachelor of Medical Radiation & Imaging Technology)
+- BASLP (Bachelor of Audiology, Speech Language Pathology)
+
+PHYSICAL EDUCATION:
+- BPEd (Bachelor of Physical Education)
+- MPEd (Master of Physical Education)
+
+Ph.D. PROGRAMMES:
+- Ph.D. available across Engineering, Management, Medical, Pharmacy, Science, Law, Education, Agriculture, and more.
+
+=== FEES STRUCTURE ===
+B.Tech CSE: Approximately 1.2 lakh per year (1,20,000)
+B.Tech (Other branches): Approximately 1.0-1.2 lakh per year
+BCA: Approximately 90,000 per year
+BBA: Approximately 80,000-90,000 per year
+MBA: Approximately 1.5 lakh per year
+MBBS: Approximately 15 lakh per year (NEET required)
+BDS: Approximately 8 lakh per year
+B.Sc Nursing: Approximately 1.2 lakh per year
+B.Pharm: Approximately 80,000-1 lakh per year
+Note: Fees may vary. Contact admissions cell for exact latest figures. Installment payment options available.
+
+=== SCHOLARSHIPS ===
+Academic Scholarships: Based on Class 12 board marks or entrance exam scores. Up to 100% tuition fee waiver possible.
+- Maximum 3 additional scholarships/concessions can be availed in addition to Academic Scholarship.
+- 5% extra concession for annual fee payment mode.
+- 10% discount for siblings of existing TMU students (applicable on first year tuition fee).
+- 20% discount for polytechnic students transitioning to B.Tech (from 2nd to 4th year).
+- Special scholarships for differently-abled students (case by case basis based on disability certificate).
+Sports Scholarships: For students who have participated at Olympic level, Asian Games, Commonwealth Games, SAF Games, Paralympics, All India University Championships.
+Minority Scholarships: Available. Details from admissions cell.
+Education Loans: TMU has tie-ups with major banks (SBI, PNB, etc.) for education loans.
+
+=== HOSTEL & ACCOMMODATION ===
+TMU has 5 hostels on campus: 2 for boys, 3 for girls.
+Total hostel capacity: 4,600 students.
+Hostel facilities:
+- Spacious, clean, well-maintained rooms with attached bathrooms
+- Single occupancy and sharing basis options
+- Furnished with beds, wardrobes, study tables, chairs, air-coolers
+- Air-conditioned rooms available
+- Solar heaters for hot water in all hostels
+- Water purifiers and water coolers for potable water
+- 24/7 power backup
+- Wi-Fi connectivity in all rooms
+- Laundry facility with commercial washing machines and dryers
+- Spacious dining rooms and modern kitchens (mess)
+- Visitor's room in each hostel
+- Common room with large screen TV and recreational facilities
+- Indoor games equipment
+- Dedicated team of wardens and caretakers
+- Faculty counsellors associated with each hostel
+- Yoga and meditation sessions in morning and evening
+- 24/7 CCTV surveillance and security
+Hostel Fees: Approximately 60,000-70,000 per year, meals included (boys and girls).
+Girls hostels: Strictly secure with additional women wardens. Safe environment.
+Boys hostels: Vardhman Bhawan, Prakash Bhawan and others.
+Note: Exact hostel fee may vary. Contact admissions for latest figures.
+
+=== HOSPITAL (TMU MULTI-SPECIALTY HOSPITAL) ===
+TMU Hospital is the best multi-specialty hospital in Moradabad.
+1000+ bed super-specialty hospital right on the campus.
+Available 24/7 with emergency care services.
+Hospital provides practical training for MBBS, Nursing, Physiotherapy, and Allied Health students.
+Departments at TMU Hospital:
+- Cardiology, Neurology, Orthopedics, ENT (Ear, Nose, Throat)
+- Plastic Surgery, Nephrology, CTVS (Cardio-Thoracic Vascular Surgery)
+- Neuro Surgery, Urology, Gastroenterology, General Surgery
+- Medicine (Internal Medicine), Psychiatry, Ophthalmology, Dermatology
+- Gynecology & Obstetrics, Pediatrics, Respiratory Medicine
+- Dental, Physiotherapy, Radiology & Imaging
+Helpline available for hospital emergencies.
+Free or subsidized treatment available for students in hostel for minor ailments.
+
+=== SPORTS FACILITIES ===
+TMU champions sports as an integral part of student development.
+World-class sports facilities available on campus:
+- Cricket ground (outdoor)
+- Football ground (outdoor)
+- Basketball courts (indoor + outdoor)
+- Badminton courts (indoor)
+- Table Tennis tables
+- Volleyball courts
+- Kabaddi court
+- Athletic/running track
+- Swimming Pool
+- Indoor Sports Complex
+Professional coaching available for all sports.
+Inter-college and university-level tournaments are organized.
+Sports scholarships available for outstanding athletes.
+Many TMU students participate in national-level sports events.
+
+=== GYMNASIUM (GYM) ===
+Fully equipped gymnasium available for all students on campus.
+Both male and female students can use the gym.
+Modern equipment available including cardio machines, weights, and training area.
+
+=== LIBRARY ===
+Knowledge Resource Centre (KRC) — Central Library + 4 branch libraries in academic blocks.
+Collection: 2,43,943 books | 11,768 e-books | 343 print journals | 8,825 e-journals
+Subscriptions: EBSCOhost, Lexis Nexis, DELNET (full-text research databases)
+Fully automated with KOHA open-source library management software
+OPAC (Online Public Access Catalogue) for book search
+Digital Library and E-Library resources
+Access to Sodhganga, SodhSindhu, INFLIBNET, NMEICT/NPTEL, SWAYAM, e-PG Pathshala
+Open late nights during examination periods
+Approx. 1,200 visitors per day
+CCTV cameras installed for security
+Fire safety equipment installed
+
+=== OTHER CAMPUS FACILITIES ===
+Wi-Fi: High-speed Wi-Fi across the entire campus including all hostels.
+Banking: Bank branch on campus. ATMs available within campus.
+Transport: University bus service connecting to major areas in and around Moradabad city.
+Auditorium: Large auditorium for events, cultural programs, and seminars.
+Guest House: Guest house facility available.
+Faculty Accommodation: Faculty accommodation on campus.
+Food/Mess: Multiple dining options. North Indian, South Indian, Chinese cuisine. Veg and Non-Veg. Hygienic and nutritious meals.
+Canteen/Food Hub: Multiple canteens and food hubs on campus.
+Yoga & Meditation: Daily sessions available for all students.
+Mahaveer Ji Jinalaya: Beautiful temple (Jain temple) on campus for spiritual development.
+Music & Dance: Cultural clubs and facilities for music, dance, and fine arts.
+Student Clubs: Multiple student clubs and associations.
+
+=== SECURITY ===
+24/7 CCTV surveillance throughout campus.
+Controlled entry gates with security guards.
+Anti-ragging zero-tolerance policy actively enforced.
+Women's safety: special wardens and security in girls' hostels.
+Anti-ragging committee and helpline available.
+24-hour patrol security.
+
+=== PLACEMENT & INDUSTRY CONNECTIONS ===
+85% Placement Rate (2022-23 academic year)
+Highest Package: 60 LPA
+Average Package (CSE): 5-6 LPA
+Average Package (MBA): 6-8 LPA
+Top Recruiters: TCS, Infosys, Wipro, IBM, HCL, Deloitte, HDFC Bank, Axis Bank, and 100+ companies
+Industry Collaborations: IBM, AutoCAD, TCS-iON, Aspiring Leaders India Foundation (ALIF), and 100+ national/international organizations
+CTLD: Centre for Training, Learning and Development — provides career talks and corporate readiness sessions.
+Students get live projects, global internship opportunities.
+
+=== INTERNATIONAL COLLABORATIONS ===
+Member of United Nations Academic Impact (UNAI)
+MSc AI and MSc Data Science in collaboration with Aivancity, France
+100+ national and international collaborations
+Student exchange programs available
+Global internship opportunities
+
+=== INNOVATION AND STARTUPS ===
+Business Incubation Centre: Recognized by UP State Government
+Entrepreneurship Development Cell active
+Institution Innovation Council (IIC)
+Several student startups have received funding
+Tejas: TMU's startup cell — mentors and supports student entrepreneurs
+NIRF Innovation Band: 51-100 rank
+
+=== ADMISSION PROCESS ===
+How to Apply: Visit tmu.ac.in and fill online application form.
+Application Form: Available at www.tmu.ac.in/tmu/application-form
+Entrance Exams Accepted:
+- Engineering: JEE Main, UPSEE, TMU Entrance Test
+- Medical/Dental: NEET
+- General: CUET
+- Management: TMU Entrance Test / CAT / MAT
+Documents Required: Class 10 marksheet, Class 12 marksheet, Aadhaar card, passport-size photographs, category certificate (if applicable), entrance exam scorecard.
+Installment Payment: Yes, fee installment options are available.
+Refund Policy: Follows UGC guidelines — full refund before classes start, partial after.
+
+=== WHY CHOOSE TMU ===
+- NAAC 'A' Grade — Top accreditation in India
+- 140-acre green, peaceful campus in Moradabad
+- Over 150 programmes across 14 colleges
+- Highest placement package of 60 LPA
+- 85% placement rate
+- 1000+ bed hospital on campus for medical students
+- 5 hostels with 4,600 capacity, 24/7 security
+- International collaborations with France, UNAI
+- Industry tie-ups with IBM, TCS, AutoCAD etc.
+- ICAR, NBA, UGC, AICTE accredited
+- Scholarships up to 100% available
+- NEP 2020 compliant education
+- Outcome-Based Education (OBE)
+- Excellent sports and cultural facilities
+- 28,000+ alumni network
+
+=== CONTACT INFORMATION ===
+University Address: N.H.-9, Delhi Road, Moradabad - 244001, Uttar Pradesh, India
+Admissions Toll-Free: 1800-270-1490
+University Phone: Available on website
+Admissions Email: admissions@tmu.ac.in
+University Email: university@tmu.ac.in
+Website: www.tmu.ac.in
+ERP/Student Portal: portal.tmu.ac.in
+Business Incubation: incubator.tmu.ac.in
+Online Application: www.tmu.ac.in/tmu/application-form
+Campus virtual tour available on website.
