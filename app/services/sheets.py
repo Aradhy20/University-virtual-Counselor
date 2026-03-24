@@ -11,7 +11,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
-logger = logging.getLogger("aditi.sheets")
+logger = logging.getLogger("riya.sheets")
 
 class GoogleSheetService:
     def __init__(self):
@@ -19,10 +19,10 @@ class GoogleSheetService:
         self.sheet_id = os.getenv("GOOGLE_SHEET_ID")
         self.client = None
         self.sheet = None
-        
-        self._connect()
+        self._connection_attempted = False
 
     def _connect(self):
+        self._connection_attempted = True
         try:
             if not GSPREAD_AVAILABLE:
                 logger.warning("gspread not installed. Google Sheets disabled.")
@@ -43,6 +43,9 @@ class GoogleSheetService:
 
     def add_lead(self, phone: str, name: str = "", course: str = "", city: str = ""):
         """Appends a lead to the sheet."""
+        if not self.sheet and not self._connection_attempted:
+            self._connect()
+
         if not self.sheet:
             logger.warning("Google Sheets not active. Skipping save.")
             return

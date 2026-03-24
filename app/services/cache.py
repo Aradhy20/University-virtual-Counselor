@@ -12,7 +12,7 @@ from cachetools import TTLCache
 from rapidfuzz import fuzz, process
 import logging
 
-logger = logging.getLogger("aditi.cache")
+logger = logging.getLogger("riya.cache")
 
 # Minimum fuzzy match score (0-100) to consider a cache hit
 FUZZY_THRESHOLD = 75

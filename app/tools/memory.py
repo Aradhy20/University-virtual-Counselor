@@ -6,7 +6,7 @@ import logging
 import json
 from pathlib import Path
 
-logger = logging.getLogger("aditi.memory")
+logger = logging.getLogger("riya.memory")
 
 class SessionMemory:
     def __init__(self, data_dir: str = "data/sessions"):

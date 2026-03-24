@@ -10,7 +10,7 @@ This is the LAST LINE OF DEFENSE against factually incorrect responses.
 import re
 import logging
 
-logger = logging.getLogger("aditi.guard")
+logger = logging.getLogger("riya.guard")
 
 
 # Known hallucination patterns to block
@@ -27,9 +27,10 @@ HALLUCINATION_PATTERNS = [
     # AI disclosure violations
     (r"\b(I am an? (AI|artificial|bot|language model|chatbot|virtual assistant))\b", "AI_DISCLOSURE"),
     (r"\b(as an? (AI|artificial intelligence|language model))\b", "AI_DISCLOSURE"),
-    # Identity leaks
+    # Identity leaks from the older Riya persona
     (r"\b(main Riya hoon|I am Riya|Riya here|mera naam Riya)\b", "IDENTITY_LEAK"),
-    (r"\b(my name is Riya|this is Riya)\b", "IDENTITY_LEAK"),
+    (r"\b(my name is Riya|this is Riya|Riya speaking)\b", "IDENTITY_LEAK"),
+    (r"\b(Riya ji|Riya didi)\b", "IDENTITY_LEAK"),
 ]
 
 # Safe replacement responses by violation type

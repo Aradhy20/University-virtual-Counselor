@@ -15,7 +15,7 @@ import logging
 import re
 from app.services.semantic_router import SemanticRouter
 
-logger = logging.getLogger("aditi.router")
+logger = logging.getLogger("riya.router")
 
 
 # Keywords that indicate INFO-SEEKING about admission (should be RAG, not INTERESTED)
@@ -52,6 +52,8 @@ CHITCHAT_KEYWORDS = [
     r"^(bye|goodbye|alvida|dhanyavad|shukriya|thank you|thanks|ok bye|theek hai)[\s!.?]*$",
     r"^(kaise ho|how are you|kaisi hain)[\s!.?]*$",
     r"^(haan|ok|accha|alright|hmm|ji)[\s!.?]*$",
+    r"^(hello|hi|hey)[,\s]+(how are you|how r you)[\s!.?]*$",
+    r"^(namaste|namaskar)\s+ji[\s!.?]*$",
 ]
 
 

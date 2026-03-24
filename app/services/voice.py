@@ -3,7 +3,7 @@ Voice Service — ElevenLabs (Primary) + Deepgram Aura (Fallback)
 
 Features:
   - ElevenLabs with eleven_multilingual_v2 model for Hindi/English/Hinglish
-  - Custom voice design for "Aditi" — warm Indian female counselor
+  - Custom voice design for "Riya" — warm Indian female counselor
   - Deepgram Aura fallback (aura-asteria-en)
   - PCM→Mulaw transcoding for Twilio
   - Consistent voice maintained across entire call
@@ -11,7 +11,6 @@ Features:
 import os
 import io
 import struct
-import audioop
 import logging
 import json
 from dotenv import load_dotenv
@@ -20,13 +19,13 @@ from elevenlabs.client import AsyncElevenLabs
 from app.services.config_loader import config_loader
 
 load_dotenv()
-logger = logging.getLogger("aditi.voice")
+logger = logging.getLogger("riya.voice")
 
 
-# ElevenLabs Voice Configuration for Aditi
+# ElevenLabs Voice Configuration for Riya
 # Using Voice Design to create the perfect Indian counselor voice
-ADITI_VOICE_DESIGN = {
-    "name": "Aditi - TMU Counselor",
+RIYA_VOICE_DESIGN = {
+    "name": "Riya - TMU Counselor",
     "description": "A warm, confident Indian female voice. Sounds like a caring elder sister who is a senior university admission counselor. Professional yet approachable. Speaks naturally in Hindi, English, and Hinglish. Age: 28-35. Accent: Indian English with natural Hindi inflections.",
     "labels": {
         "accent": "indian",
@@ -37,7 +36,7 @@ ADITI_VOICE_DESIGN = {
 }
 
 # Primary: Standard Voice (Works on Free Plan)
-ADITI_PRIMARY_VOICE_ID = "21m00Tcm4TlvDq8ikWAM" # Rachel
+RIYA_PRIMARY_VOICE_ID = "21m00Tcm4TlvDq8ikWAM" # Rachel
 
 # Fallback: Pre-built Indian female voices from ElevenLabs library
 INDIAN_VOICE_IDS = [
@@ -52,7 +51,7 @@ class VoiceService:
         config = config_loader.get_config()
         self.dg_api_key = config.api.deepgram_api_key or os.getenv("DEEPGRAM_API_KEY")
         self.eleven_api_key = config.api.elevenlabs_api_key or os.getenv("ELEVENLABS_API_KEY")
-        self.aditi_voice_id = None
+        self.riya_voice_id = RIYA_PRIMARY_VOICE_ID
 
         # --- Deepgram (Speech-to-Text + TTS Fallback) ---
         if self.dg_api_key:
@@ -67,18 +66,31 @@ class VoiceService:
         if self.eleven_api_key:
             self.eleven = AsyncElevenLabs(api_key=self.eleven_api_key)
             logger.info("ElevenLabs Async client initialized")
-            self._setup_aditi_voice()
+            self._setup_riya_voice()
         else:
             logger.warning("ElevenLabs API Key missing. Using Deepgram TTS only.")
             self.eleven = None
 
-    def _setup_aditi_voice(self):
+    def _setup_riya_voice(self):
         """
-        Set up the Aditi voice ID from Config.
+        Set up the Riya voice ID from Config.
         """
         config = config_loader.get_config()
-        self.aditi_voice_id = config.voice.voice_id
-        logger.info(f"Aditi voice ID set to: {self.aditi_voice_id}")
+        configured_voice_id = (config.voice.voice_id or "").strip()
+        if configured_voice_id and not configured_voice_id.startswith("aura-"):
+            self.riya_voice_id = configured_voice_id
+        else:
+            self.riya_voice_id = RIYA_PRIMARY_VOICE_ID
+        logger.info(f"Riya voice ID set to: {self.riya_voice_id}")
+
+    def get_tts_provider(self) -> str:
+        """
+        Prefer ElevenLabs when available because it is the higher-quality primary TTS.
+        Fall back to Deepgram automatically if ElevenLabs is unavailable.
+        """
+        if self.eleven:
+            return "elevenlabs"
+        return "deepgram"
 
     def get_deepgram_options(self) -> dict:
         """Deepgram live STT options — multi-language auto-detect."""
@@ -107,7 +119,7 @@ class VoiceService:
             return
 
         config = config_loader.get_config()
-        voice_id = config.voice.voice_id or self.aditi_voice_id
+        voice_id = self.riya_voice_id or RIYA_PRIMARY_VOICE_ID
         
         # Dynamic Settings from Config
         voice_settings = {
@@ -151,7 +163,9 @@ class VoiceService:
             logger.error("ElevenLabs client not initialized.")
             return
 
-        voice_id = self.aditi_voice_id or "21m00Tcm4TlvDq8ikWAM"
+        # Ensure we don't pass a Deepgram ID to ElevenLabs
+        config = config_loader.get_config()
+        voice_id = self.riya_voice_id or RIYA_PRIMARY_VOICE_ID
         
         # Merge with defaults
         settings = {
@@ -182,29 +196,7 @@ class VoiceService:
             logger.error(f"ElevenLabs Mood TTS failed: {e}")
             raise
 
-    def text_to_speech_stream_pcm(self, text: str):
-        """Alternative: PCM output with manual Mulaw conversion."""
-        if not self.eleven:
-            return
 
-        voice_id = self.aditi_voice_id or "21m00Tcm4TlvDq8ikWAM"
-
-        try:
-            audio_iterator = self.eleven.text_to_speech.stream(
-                voice_id=voice_id,
-                text=text,
-                model_id="eleven_multilingual_v2",
-                output_format="pcm_8000",
-                optimize_streaming_latency=4,
-            )
-
-            for pcm_chunk in audio_iterator:
-                if pcm_chunk:
-                    mulaw_chunk = audioop.lin2ulaw(pcm_chunk, 2)
-                    yield mulaw_chunk
-
-        except Exception as e:
-            logger.error(f"TTS (PCM path) failed: {e}", exc_info=True)
 
     # ----------------------------------------------------------
     # Deepgram TTS (Fallback)

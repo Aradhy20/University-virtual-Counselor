@@ -1,10 +1,19 @@
 
 import logging
-import numpy as np
-from sentence_transformers import SentenceTransformer, util
 import os
 
-logger = logging.getLogger("aditi.semantic_router")
+try:
+    import numpy as np
+except ImportError:
+    np = None
+
+try:
+    from sentence_transformers import SentenceTransformer, util
+except ImportError:
+    SentenceTransformer = None
+    util = None
+
+logger = logging.getLogger("riya.semantic_router")
 
 class SemanticRouter:
     def __init__(self, model_name="paraphrase-multilingual-MiniLM-L12-v2", threshold=0.45):
@@ -17,11 +26,12 @@ class SemanticRouter:
         self.threshold = threshold
         try:
             logger.info(f"Loading Semantic Router model: {model_name}...")
-            # Use the same model cache as RAG to save memory
+            if SentenceTransformer is None or np is None:
+                raise ImportError("sentence-transformers or numpy is not installed")
             self.model = SentenceTransformer(model_name)
             logger.info("Semantic Router model loaded.")
         except Exception as e:
-            logger.error(f"Failed to load embedding model: {e}")
+            logger.warning(f"Failed to load embedding model: {e}. Semantic routing disabled.")
             self.model = None
 
         # Define Anchor Sentences (Prototypes) for each Intent

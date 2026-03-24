@@ -28,6 +28,7 @@ class RAGConfig(BaseModel):
 class PromptsConfig(BaseModel):
     system_prompt: str = Field(..., description="Main Persona System Prompt")
     clarification_prompt: str = Field(..., description="Prompt for low confidence")
+    opening_line: str = Field("Hello! I am Aditi, your Senior Admission Counselor at TMU. How can I help you today?", description="Opening greeting for calls")
     safety_rules: List[str] = Field(default_factory=list, description="List of safety protocols")
 
 class APIConfig(BaseModel):

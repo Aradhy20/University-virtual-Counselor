@@ -8,7 +8,7 @@ import logging
 from pathlib import Path
 from datetime import datetime
 
-logger = logging.getLogger("aditi.leads")
+logger = logging.getLogger("riya.leads")
 
 LEADS_FILE = Path(__file__).parent.parent.parent / "data" / "leads.xlsx"
 

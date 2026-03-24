@@ -6,7 +6,7 @@ import json
 from livekit import api
 import logging
 
-logger = logging.getLogger("aditi.api.livekit")
+logger = logging.getLogger("riya.api.livekit")
 router = APIRouter(prefix="/livekit", tags=["LiveKit Voice Agent"])
 
 class LiveKitCallRequest(BaseModel):

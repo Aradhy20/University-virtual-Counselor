@@ -14,7 +14,6 @@ from pathlib import Path
 # Add project root to path
 sys.path.append(str(Path(__file__).parent.parent))
 
-import uvicorn
 import json
 import base64
 import asyncio
@@ -39,6 +38,7 @@ from app.core.database import init_db
 from app.services.hallucination_guard import check_response, check_response_length
 from app.services.emotional_tracker import EmotionalTracker
 from app.services.streaming import split_into_sentences, estimate_speech_duration_ms
+from app.services.config_loader import config_loader
 
 # Load Env
 load_dotenv()
@@ -49,7 +49,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
     datefmt="%H:%M:%S",
 )
-logger = logging.getLogger("aditi")
+logger = logging.getLogger("riya")
 
 
 # --- App Lifecycle ---
@@ -240,7 +240,7 @@ async def websocket_endpoint(websocket: WebSocket):
     # Utterance buffering: collect fragments before processing
     utterance_buffer = []  # List of transcript fragments
     utterance_timer: asyncio.Task | None = None  # Timer task for silence detection
-    UTTERANCE_SILENCE_MS = 400  # Wait 0.4s of silence before processing (was 700ms)
+    UTTERANCE_SILENCE_MS = 200  # Wait 0.2s of silence before processing (was 400ms)
 
     
     # Response deduplication
@@ -263,7 +263,7 @@ async def websocket_endpoint(websocket: WebSocket):
     }
     
     # Conversation history for context (prevents repeated greetings)
-    conversation_turns = []  # list of ("USER"/"ADITI", text) tuples
+    conversation_turns = []  # list of ("USER"/"RIYA", text) tuples
     turn_count = 0  # Tracks how many exchanges have happened (for lead capture timing)
 
     try:
@@ -410,7 +410,12 @@ async def websocket_endpoint(websocket: WebSocket):
                     logger.info(f"Silence nudge #{silence_count}: {nudge}")
                     is_speaking = True
                     try:
-                        async for audio_chunk in voice_service.text_to_speech_stream(nudge):
+                        provider = voice_service.get_tts_provider()
+                        if provider == "elevenlabs":
+                            tts_stream = voice_service.text_to_speech_stream(nudge)
+                        else:
+                            tts_stream = voice_service.deepgram_tts_stream(nudge)
+                        async for audio_chunk in tts_stream:
                             if cancel_speaking.is_set():
                                 break
                             if audio_chunk and stream_sid:
@@ -422,7 +427,8 @@ async def websocket_endpoint(websocket: WebSocket):
                                 })
                     except Exception as e:
                         logger.error(f"Silence nudge TTS error: {e}")
-                    is_speaking = False
+                    finally:
+                        is_speaking = False
             except asyncio.CancelledError:
                 pass
 
@@ -442,9 +448,9 @@ async def websocket_endpoint(websocket: WebSocket):
                 if text is None:
                     break  # Poison pill — shutdown
 
-                # Discard very short transcripts (noise, breathing, clicks)
-                if len(text.split()) < 2:
-                    logger.info(f"Discarding very short transcript (noise?): '{text}'")
+                # Discard extremely short noise (single characters or empty)
+                if len(text.strip()) <= 1:
+                    logger.info(f"Discarding empty or noise transcript: '{text}'")
                     continue
 
                 try:
@@ -452,7 +458,7 @@ async def websocket_endpoint(websocket: WebSocket):
                     reset_silence_timer()
                     
                     # Phase 4: Update emotional state
-                    mood = emotion_tracker.update(text)
+                    mood = await emotion_tracker.async_update(text)
                     mood_hint = emotion_tracker.get_response_hint()
                     
                     # Reset cancel signal for new response
@@ -506,7 +512,7 @@ async def websocket_endpoint(websocket: WebSocket):
                                     
                                     saved = save_lead(
                                         name=lead_state["name"],
-                                        phone=call_sid or "Unknown", # Use CallSid as proxy for phone if number unavailable
+                                        phone=caller_phone or "Unknown",
                                         course=lead_state["course"],
                                         city=lead_state["city"]
                                     )
@@ -572,36 +578,54 @@ async def websocket_endpoint(websocket: WebSocket):
                             logger.info("TTS interrupted by barge-in")
                             break
                         
-                        # ElevenLabs TTS with mood-aware settings
-                        try:
-                            async for audio_chunk in voice_service.text_to_speech_stream_with_settings(
-                                sentence, voice_settings=tts_mood_settings
-                            ):
-                                if cancel_speaking.is_set():
-                                    break
-                                if audio_chunk and stream_sid:
-                                    payload = base64.b64encode(audio_chunk).decode("utf-8")
-                                    await websocket.send_json({
-                                        "event": "media",
-                                        "streamSid": stream_sid,
-                                        "media": {"payload": payload}
-                                    })
-                        except Exception as e:
-                            logger.error(f"ElevenLabs TTS error: {e}. Falling back to Deepgram.")
-                            if not cancel_speaking.is_set():
-                                try:
-                                    async for audio_chunk in voice_service.deepgram_tts_stream(sentence):
-                                        if cancel_speaking.is_set():
-                                            break
-                                        if audio_chunk and stream_sid:
-                                            payload = base64.b64encode(audio_chunk).decode("utf-8")
-                                            await websocket.send_json({
-                                                "event": "media",
-                                                "streamSid": stream_sid,
-                                                "media": {"payload": payload}
-                                            })
-                                except Exception as dg_err:
-                                    logger.error(f"Deepgram Fallback failed: {dg_err}")
+                        provider = voice_service.get_tts_provider()
+                        
+                        if provider == "elevenlabs":
+                            # ElevenLabs TTS with mood-aware settings
+                            try:
+                                async for audio_chunk in voice_service.text_to_speech_stream_with_settings(
+                                    sentence, voice_settings=tts_mood_settings
+                                ):
+                                    if cancel_speaking.is_set():
+                                        break
+                                    if audio_chunk and stream_sid:
+                                        payload = base64.b64encode(audio_chunk).decode("utf-8")
+                                        await websocket.send_json({
+                                            "event": "media",
+                                            "streamSid": stream_sid,
+                                            "media": {"payload": payload}
+                                        })
+                            except Exception as e:
+                                logger.error(f"ElevenLabs TTS error: {e}. Falling back to Deepgram.")
+                                if not cancel_speaking.is_set():
+                                    try:
+                                        async for audio_chunk in voice_service.deepgram_tts_stream(sentence):
+                                            if cancel_speaking.is_set():
+                                                break
+                                            if audio_chunk and stream_sid:
+                                                payload = base64.b64encode(audio_chunk).decode("utf-8")
+                                                await websocket.send_json({
+                                                    "event": "media",
+                                                    "streamSid": stream_sid,
+                                                    "media": {"payload": payload}
+                                                })
+                                    except Exception as dg_err:
+                                        logger.error(f"Deepgram Fallback failed: {dg_err}")
+                        else:
+                            # Direct Deepgram TTS
+                            try:
+                                async for audio_chunk in voice_service.deepgram_tts_stream(sentence):
+                                    if cancel_speaking.is_set():
+                                        break
+                                    if audio_chunk and stream_sid:
+                                        payload = base64.b64encode(audio_chunk).decode("utf-8")
+                                        await websocket.send_json({
+                                            "event": "media",
+                                            "streamSid": stream_sid,
+                                            "media": {"payload": payload}
+                                        })
+                            except Exception as dg_err:
+                                logger.error(f"Deepgram TTS failed: {dg_err}")
                     
                     is_speaking = False
                     # Reset silence timer after speaking
@@ -630,58 +654,76 @@ async def websocket_endpoint(websocket: WebSocket):
                 # --- PROACTIVE GREETING ---
                 # Greeting logic running in background to avoid blocking the loop
                 async def send_greeting():
-                    # Dynamic, professional, senior-counselor-style greeting
-                    now = datetime.now()
-                    hour = now.hour
-                    if 5 <= hour < 12:
-                        time_greeting = "Good morning"
-                    elif 12 <= hour < 17:
-                        time_greeting = "Good afternoon"
-                    else:
-                        time_greeting = "Good evening"
-
-                    # Check memory. If they called before, give a "welcome back"
-                    history = session_memory.get_chat_history(caller_phone)
-                    
-                    if "PREVIOUS" in history:
-                        # Returning student
-                        greeting_text = f"{time_greeting} again! Welcome back to Teerthanker Mahaveer University. This is Riya. I am so glad you called back! Before we continue, would you prefer to speak in English or Hindi today?"
-                    else:
-                        # First time caller
-                        variations = [
-                            f"{time_greeting}! You have reached the Admissions Cell of Teerthanker Mahaveer University. I am Riya, your Senior Admission Counselor. Which language are you more comfortable in, English or Hindi?",
-                            f"{time_greeting}! This is Riya from TMU, Moradabad. I'm so glad you called! May I ask if you'd prefer to communicate in English or Hindi?",
-                            f"Hello! Riya here from TMU. We are delighted to assist you. To better help you, could you please tell me which language you'd prefer for our conversation, English or Hindi?",
-                            f"Namaste! This is Riya, Senior Admission Counselor at TMU. I'm here to help you solve any problems regarding your admission. Would you like to continue in English or Hindi?",
-                            f"{time_greeting}! Thank you for calling TMU. I am Riya, and I'm here to guide you to your bright future. Are you comfortable with English, or would you prefer Hindi?",
-                        ]
-                        greeting_text = random.choice(variations)
-                        
-                    logger.info(f"Generated Greeting: {greeting_text}")
-
+                    nonlocal is_speaking
+                    is_speaking = True
                     try:
-                        logger.info("Sending proactive greeting via ElevenLabs...")
-                        async for chunk in voice_service.text_to_speech_stream(greeting_text):
-                            if chunk:
-                                b64_audio = base64.b64encode(chunk).decode("utf-8")
-                                await websocket.send_json({
-                                    "event": "media",
-                                    "streamSid": stream_sid,
-                                    "media": {"payload": b64_audio}
-                                })
-                    except Exception as e:
-                        logger.error(f"ElevenLabs Greeting error: {e}. Falling back to Deepgram.")
-                        # FALLBACK
-                        try:
-                            async for chunk in voice_service.deepgram_tts_stream(greeting_text):
-                                if chunk:
-                                    b64_audio = base64.b64encode(chunk).decode("utf-8")
-                                    await websocket.send_json({
-                                        "event": "media",
-                                        "streamSid": stream_sid,
-                                        "media": {"payload": b64_audio}
-                                    }) 
-                        except: pass
+                        # Dynamic, professional, senior-counselor-style greeting
+                        now = datetime.now()
+                        hour = now.hour
+                        if 5 <= hour < 12:
+                            time_greeting = "Good morning"
+                        elif 12 <= hour < 17:
+                            time_greeting = "Good afternoon"
+                        else:
+                            time_greeting = "Good evening"
+
+                        # Check memory. If they called before, give a "welcome back"
+                        history = session_memory.get_chat_history(caller_phone)
+                        
+                        if "PREVIOUS" in history:
+                            greeting_text = f"{time_greeting} again! Welcome back to TMU. This is Aditi. So glad you called back! English ya Hindi mein baat karein?"
+                        else:
+                            variations = [
+                                f"{time_greeting}! TMU Admissions mein aapka swagat hai. Main Aditi hoon, aapki Senior Counselor. English ya Hindi, kaise baat karein?",
+                                f"{time_greeting}! This is Aditi from TMU, Moradabad. So glad you called! English or Hindi, whichever you prefer?",
+                                f"Namaste! Aditi here from TMU. I'm here to help you with admissions. English ya Hindi mein baat karein?",
+                            ]
+                            greeting_text = random.choice(variations)
+                            
+                        logger.info(f"Generated Greeting: {greeting_text}")
+
+                        provider = voice_service.get_tts_provider()
+                        
+                        if provider == "elevenlabs":
+                            try:
+                                logger.info("Sending greeting via ElevenLabs...")
+                                async for chunk in voice_service.text_to_speech_stream(greeting_text):
+                                    if chunk:
+                                        b64_audio = base64.b64encode(chunk).decode("utf-8")
+                                        await websocket.send_json({
+                                            "event": "media",
+                                            "streamSid": stream_sid,
+                                            "media": {"payload": b64_audio}
+                                        })
+                            except Exception as e:
+                                logger.error(f"ElevenLabs Greeting error: {e}. Falling back to Deepgram.")
+                                try:
+                                    async for chunk in voice_service.deepgram_tts_stream(greeting_text):
+                                        if chunk:
+                                            b64_audio = base64.b64encode(chunk).decode("utf-8")
+                                            await websocket.send_json({
+                                                "event": "media",
+                                                "streamSid": stream_sid,
+                                                "media": {"payload": b64_audio}
+                                            }) 
+                                except Exception as dg_e:
+                                    logger.error(f"Deepgram greeting fallback also failed: {dg_e}")
+                        else:
+                            try:
+                                logger.info("Sending greeting via Deepgram...")
+                                async for chunk in voice_service.deepgram_tts_stream(greeting_text):
+                                    if chunk:
+                                        b64_audio = base64.b64encode(chunk).decode("utf-8")
+                                        await websocket.send_json({
+                                            "event": "media",
+                                            "streamSid": stream_sid,
+                                            "media": {"payload": b64_audio}
+                                        }) 
+                            except Exception as e:
+                                logger.error(f"Deepgram Greeting error: {e}")
+                    finally:
+                        is_speaking = False
+                        logger.info("Greeting complete — is_speaking reset to False")
 
                 asyncio.create_task(send_greeting())
 
@@ -692,14 +734,19 @@ async def websocket_endpoint(websocket: WebSocket):
                 # Check for silence (simple energy check) to avoid sending empty noise?
                 # For now, send everything to Deepgram.
                 
-                if dg_socket and not is_speaking:
-                    # CRITICAL FIX: Only send audio to Deepgram when Riya is NOT speaking.
-                    # Otherwise, Riya's own TTS audio loops back and confuses the STT.
-                    await dg_socket.send(audio_chunk)
+                if dg_socket:
+                    # Always send audio to Deepgram for STT processing.
+                    # This ensures user speech is captured even during TTS playback
+                    # (barge-in detection relies on receiving transcripts).
+                    try:
+                        await dg_socket.send(audio_chunk)
+                    except Exception as ws_err:
+                        logger.error(f"Deepgram send error: {ws_err}")
+                        dg_socket = None  # Mark as dead so we don't keep trying
                     
                     chunk_count += 1
-                    if chunk_count % 50 == 0:
-                        logger.info(f"Received/Sent {chunk_count} chunks to Deepgram. Last size: {len(audio_chunk)}")
+                    if chunk_count % 100 == 0:
+                        logger.info(f"Audio chunks sent to Deepgram: {chunk_count}")
 
             elif data["event"] == "stop":
                 logger.info("Stream stopped by Twilio")

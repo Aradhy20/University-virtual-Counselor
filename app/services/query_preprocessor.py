@@ -64,6 +64,15 @@ COURSE_ALIASES = {
     "d pharm": "D.Pharm",
 }
 
+# Short aliases like "me" and "it" are ambiguous in normal speech.
+# Only expand them when the surrounding words clearly indicate course context.
+AMBIGUOUS_SHORT_ALIASES = {"ai", "ce", "cs", "ds", "ee", "it", "me", "ml"}
+COURSE_CONTEXT_WORDS = {
+    "admission", "branch", "course", "degree", "diploma", "engineering",
+    "program", "programme", "specialization", "stream", "subject",
+    "btech", "b.tech", "mtech", "m.tech", "mba", "bca", "mca", "bba",
+}
+
 # ---------------------------------------------------------------
 # Hinglish → English Normalization
 # ---------------------------------------------------------------
@@ -184,28 +193,51 @@ def preprocess_query(raw_query: str) -> str:
     Normalize Hinglish + expand abbreviations for better retrieval.
     Returns a cleaned, expanded version of the query.
     """
-    words = raw_query.lower().strip().split()
+    raw_words = raw_query.strip().split()
+    if not raw_words:
+        return ""
+
+    words = [re.sub(r"^[^\w]+|[^\w]+$", "", token.lower()) for token in raw_words]
     normalized = []
+    index = 0
 
-    for i, w in enumerate(words):
-        # Check multi-word aliases first (e.g., "b tech", "ba llb")
-        if i + 1 < len(words):
-            bigram = f"{w} {words[i + 1]}"
-            if bigram in COURSE_ALIASES:
-                normalized.append(COURSE_ALIASES[bigram])
-                words[i + 1] = ""  # Skip next word
-                continue
+    while index < len(words):
+        token = words[index]
+        raw_token = raw_words[index]
 
-        if w == "":
+        if not token:
+            index += 1
             continue
 
-        # Single word alias
-        if w in COURSE_ALIASES:
-            normalized.append(COURSE_ALIASES[w])
-        elif w in HINGLISH_MAP:
-            normalized.append(HINGLISH_MAP[w])
+        # Check multi-word aliases first (e.g., "b tech", "ba llb")
+        if index + 1 < len(words):
+            next_token = words[index + 1]
+            bigram = f"{token} {next_token}".strip()
+            if next_token and bigram in COURSE_ALIASES:
+                normalized.append(COURSE_ALIASES[bigram])
+                index += 2
+                continue
+
+        if token in COURSE_ALIASES:
+            if token not in AMBIGUOUS_SHORT_ALIASES:
+                normalized.append(COURSE_ALIASES[token])
+            else:
+                window = {
+                    w for w in words[max(0, index - 2):min(len(words), index + 3)]
+                    if w and w != token
+                }
+                should_expand = (
+                    raw_token.isupper()
+                    or "." in raw_token
+                    or bool(window & COURSE_CONTEXT_WORDS)
+                )
+                normalized.append(COURSE_ALIASES[token] if should_expand else token)
+        elif token in HINGLISH_MAP:
+            normalized.append(HINGLISH_MAP[token])
         else:
-            normalized.append(w)
+            normalized.append(token)
+
+        index += 1
 
     result = " ".join(normalized)
     if result != raw_query.lower().strip():

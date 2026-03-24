@@ -421,3 +421,138 @@ Main aapki puri madad karna chahti hoon! Kya aap admission ke baare mein poochhn
 
 I'd love to give you the best guidance! Are you looking for admission details, course information, or something else, dear?",RAG,1.0574423868092708e-05
 2026-03-03T13:37:35.548212,call_TEST_PHONE,,"Hello! I am Riya, your personal Senior Admission Counselor at TMU. May I ask which course or programme are you looking for? Hmm, well, we have a wide range of options here, so please feel free to share your interests!",CHITCHAT,0.0
+2026-03-05T10:48:35.349302,call_EvalUser,do you have international collaborations?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career? (Hindi: ""Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya. Boliye, main aapke behtareen career ke liye aaj kya madad kar sakti hoon?"")
+
+Please let me know if you'd prefer our conversation to be in Hindi or English, beta.",RAG,0.85
+2026-03-05T10:48:36.783394,call_EvalUser,what is the ranking of tmu?,"Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya.
+
+Aapne bahut hi samajhdari wala sawaal poocha hai! Teerthanker Mahaveer University ko NAAC ke taraf se 'A' Grade Accredited mila hai, jiska matlab hai ki hume shiksha ki gati mein bahut accha kaam kiya gaya hai. Aur humein India Today aur Outlook rankings mein bhi top position mila hai.
+
+Kya aapko pata hai ki aapke liye exact eligibility kya hota hai?",RAG,0.85
+2026-03-05T10:48:57.844317,call_EvalUser,is there a library?,"Hello, welcome to Teerthanker Mahaveer University. I'm Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career? 
+
+Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya. Boliye, main aapke behtareen career ke liye aaj kya madad kar sakti hoon?
+
+I can speak in English or Hindi — which would you prefer?",RAG,0.85
+2026-03-05T10:48:58.141786,call_EvalUser,can i get admission through cuet?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+(I can speak in English or Hindi — which would you prefer?)",RAG,0.85
+2026-03-05T10:48:58.434487,call_EvalUser,do you have a startup cell?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+I can speak in English or Hindi — which would you prefer?
+
+(Please respond with either English or Hindi)",RAG,0.85
+2026-03-05T10:48:58.758987,call_EvalUser,why should i choose tmu?,"Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya.
+
+I can speak in English or Hindi — which would you prefer?
+
+( WAITING FOR STUDENT'S RESPONSE... )",RAG,0.85
+2026-03-05T11:58:04.878504,call_Unknown,i can't understand the word in english.,"Namaste, beta! Chaliye, main aapke sawal ka jawab denungi. Kya aapko English mein samajhne mein dikkat ho rahi hai kya? Aapko Hindi bolne mein zaroor pasand hai, na?",RAG,0.85
+2026-03-05T11:59:05.247430,call_Unknown,is the response?,"""Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya. Kya aap apne career ke liye kuch jankari chahte hain? Aapko English ya Hindi mein jawab dena zaroori hai kya?""",RAG,0.85
+2026-03-05T12:07:55.076233,call_Unknown,¿qué tal,"Hello! I am Riya, your personal Senior Admission Counselor at TMU. May I ask which course or programme are you looking for?",CHITCHAT,0.85
+2026-03-05T12:08:07.110418,call_Unknown,"the yum, eddie.","Hello! I am Riya, your personal Senior Admission Counselor at TMU. Unfortunately, I didn't quite catch what you said about ""the yum, eddie"". Could you please repeat that or tell me what you're looking for at TMU?",CHITCHAT,0.85
+2026-03-05T12:08:18.385057,call_Unknown,the piece.,"Hello! I am Riya, your personal Senior Admission Counselor at TMU. What seems to be the piece you're looking for, and how can I help you today?",CHITCHAT,0.85
+2026-03-05T12:08:34.548437,call_Unknown,"do you want the basic course information, though?",Namaste! I can speak in English or Hindi — which would you prefer?,RAG,0.85
+2026-03-05T12:08:45.649341,call_Unknown,i am preferred than english.,"Namaste! Aap Hindi mein baat karenge toh bilkul theek hai! Main Riya hoon, aapki Senior Admission Counselor. Dekhiye, aapne call kiya hai TMU ke liye. Kya aapko kuch specific information chahiye, ya phir koi specific career ke baare mein puchhna hai?",RAG,0.85
+2026-03-05T12:18:39.338457,call_test,"hello riya, how are you?","Hello dear! Main theek hoon, thanks for asking. Dekhiye, I'm all ears, what's on your mind?",CHITCHAT,0.85
+2026-03-05T12:18:39.535528,call_test,"namaste, how ho?","Namaste, beta! Main Riya hoon, senior admission counselor TMU se, aapki madad karne ke liye yahaan hoon.",CHITCHAT,0.85
+2026-03-05T12:18:39.875646,call_test,what is the fee for bca?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+(I can speak in English or Hindi — which would you prefer?)
+
+Please respond with your preferred language to proceed.",RAG,0.85
+2026-03-05T12:18:40.407257,call_test,BCA of fees how much hai?,"📞 Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya.
+
+Aapne bahut hi samajhdari wala sawaal poocha hai BCA ke fees ke baare mein! BCA ka admission fees TMU mein lagbhag Rs. 1 lakh 50 hazaar tak hai, ismein sabhi courses, exam fees aur hostel charges jama kiye gaye hain. 
+
+Aap kya soch rahe hain, beta? Chaliye dekhte hain ki ismein aapke liye kya facilities hain. Bilkul, main aapke liye TMU ka BCA course check kar sakti hoon. Kya main aapke liye eligibility ka check kar sakti hoon?",RAG,0.85
+2026-03-05T12:18:40.940800,call_test,tell Mechanical Engineering about placements at tmu,"Namaste, beti! Main aapki Senior Admission Counselor Riya hoon. Aapne Mechanical Engineering ke placements ke bare mein poochha hai TMU mein. 
+
+Bilkul, mechanical engineers ke liye TMU mein placements bahut hi achchhe hain. Hamare students ko top companies mein placements mile hain, jaise ki Maruti, Honda, L&T, Bosch, aur kai anya. Humne apne previous batches mein 80% se zyada students ko placements ke liye select kiya hai.
+
+Aapko mechanical engineering ke admissions ke liye eligibility criteria aur fees ke bare mein pata chalne ke liye zaroorat hai? Chaliye dekhte hain, main aapko sahi jaankaari de sakoon!",RAG,0.85
+2026-03-05T12:18:41.235884,call_test,"my name is aarav from delhi, i want BCA","Namaste, Aarav beta! Aapke BCA ke liye TMU ka College of Engineering bahut hi accha hai. Kya aapke pas 12th mein Mathematics aur Computer Science mein 50% se upar percentage hai?",RAG,0.85
+2026-03-05T12:19:49.897611,call_test,"hello riya, how are you?","Main theek hoon, beta! Dekhiye, aap bhi kaise hain? (Translation: I'm fine, beta! See, how are you?)
+
+How can I help you today?",CHITCHAT,0.85
+2026-03-05T12:19:50.129981,call_test,"namaste, how ho?","Namaste, beta! Main Riya hoon, aapka admission counselor TMU mein. Aap kya channel se mujhse connect hui hain?",CHITCHAT,0.85
+2026-03-05T12:19:50.423449,call_test,what is the fee for bca?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+I can speak in English or Hindi — which would you prefer?",RAG,0.85
+2026-03-05T12:19:50.732817,call_test,BCA of fees how much hai?,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+I can speak in English or Hindi — which would you prefer?
+
+(Please respond, and I'll start our conversation accordingly.)",RAG,0.85
+2026-03-05T12:19:50.984453,call_test,tell Mechanical Engineering about placements at tmu,"Namaste, beta! Chaliye dekhte hain. I can speak in English or Hindi — which would you prefer?",RAG,0.85
+2026-03-05T12:19:51.316055,call_test,"my name is aarav from delhi, i want BCA","Hello, welcome to Teerthanker Mahaveer University. I am Riya, your Senior Admission Counselor. Aaapka naam aarav hai, Delhi se aapka? Beta, BCA karna ek accha faisla hai. Main aapko TMU ka BCA program dekhate hain, yeh kaisa ho sakta hai?",RAG,0.85
+2026-03-05T12:22:17.554381,call_test,"hello riya, how are you?","Beta, main thodi thak gayi hoon lekin aapke saath baat karke khush hoon! Dekhiye, aap kaise hain, zaroor batao.",CHITCHAT,0.85
+2026-03-05T12:23:39.458441,call_test,"hello riya, how are you?","Kya baat hai, beta! I'm doing great, thanks for asking. Dekhiye, how can I help you today?",CHITCHAT,0.85
+2026-03-05T12:23:39.658916,call_test,"namaste, how ho?","Namaste beta, main theek hoon! Kya aap TMU ke liye admission ka process chahte hain?",CHITCHAT,0.85
+2026-03-05T12:23:40.177824,call_test,what is the fee for bca?,"""Namaste, beta! Main aapki Senior Admission Counselor Riya hoon. Main aapke career ke liye aaj kya madad kar sakti hoon? Aapne BCA ke fee ke baray me poochha hai. 
+
+BCA ka fee hamaare TMU mein 1.5 lakh rupee per annum hai. Ismein sabhi charges shamil hain, likhein, aur padhai ke liye kitne bhi zaroorat padegi. 
+
+Chaliye dekhte hain, aapke liye koi scholarship ya scheme uplabdh hai kya?""",RAG,0.85
+2026-03-05T12:23:40.618748,call_test,BCA of fees how much hai?,"Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya. Boliye, main aapke behtareen career ke liye aaj kya madad kar sakti hoon?
+
+Aapne BCA ke fees ke bare mein poocha hai. Accha, toh hamari BCA ke fees bahut aasan hain. Aapko lagbhag 50,000 se 70,000 rupaye ka fees per annum milta hai.
+
+Would you like me to check the exact eligibility for BCA course at TMU?",RAG,0.85
+2026-03-05T12:23:40.894506,call_test,tell Mechanical Engineering about placements,"Namaste, Teerthanker Mahaveer University mein aapka swagat hai! Main Riya hoon, aapki Senior Admission Counselor. Mujhe bahut khushi hai ki aapne call kiya. Boliye, main aapke behtareen career ke liye aaj kya madad kar sakti hoon?
+
+I can speak in English or Hindi — which would you prefer?",RAG,0.85
+2026-03-05T12:23:41.642861,call_test,my name is aarav from delhi,"Nice to meet you, Aarav. Delhi is a great city. 
+
+What's your graduation status, Aarav?",INTERESTED,0.0
+2026-03-05T12:40:21.709876,call_Unknown,pickup.,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?",RAG,0.85
+2026-03-05T12:48:27.660253,call_Unknown,i prefer english.,"Hello, welcome to Teerthanker Mahaveer University! I am Riya, your Senior Admission Counselor. I'm so glad you called today. How can I help you shape your beautiful career?
+
+(Just as you asked in English, I will continue in English for now)
+
+You've chosen to speak in English, and that's perfectly fine. I'll make sure to communicate effectively with you. Now, tell me a little bit about what brings you to our university today. Are you looking for information on a specific course or program?",RAG,0.85
+2026-03-05T13:08:42.452152,call_test,"hello riya, how ho?","Namaste, beta! Welcome to TMU! Aapka kya course chunna hai? B.Tech, MBA, ya koi aur?",CHITCHAT,0.85
+2026-03-05T13:08:42.779289,call_test,BCA of fees how much is tmu mein?,"Arre wah, great question, beta! Aap ko pata hai ki TMU ka admission brochure mein fees ka detail hai, jisme tuition, lab, aur anya applicable charges shamil hain. Shall I check the exact eligibility for you and send it to your WhatsApp?",RAG,0.85
+2026-03-05T13:08:43.089743,call_test,tell Mechanical Engineering about the placement record at tmu,"Accha, dekhiye, beta, Mechanical Engineering ka placement record TMU mein bahut achha hai! 85% eligible students ko top organizations ke through campus drives mein placement milta hai, jaise ki TCS, Wipro, Infosys, aur Amazon. Shall I tell you more about the average salary packages?",RAG,0.85
+2026-03-05T13:08:43.400088,call_test,"tmu of fees bahut zyada hai, koi discount milega?","Arre wah, great question, beta! I completely understand, fees ka concern valid hai. But TMU offers amazing scholarships! Jain students ko 50% waiver milta hai, aur merit-based scholarship bhi hai. Shall I check which scholarship applies to you?",RAG,0.85
+2026-03-05T13:08:43.815613,call_test,mere bete of admission karwana is engineering in,"Accha, dekhiye, engineering ke liye TMU ka engineering college bahut accha hai, beta! Main aapko details de sakoon, but first, aapko kya course pasand hai, CSE, ECE, civil ya mechanical?",RAG,0.85
+2026-03-05T13:08:45.240665,call_test,i am not sure which course is right for Mechanical Engineering,"Arre wah, great question, beta! Mechanical Engineering aapke liye ek bahut accha option hai, kyonki TMU mein ye branch mein sabhi facilities available hain, aur 100% placement guarantee hai.
+
+Shall I tell you about our top Mechanical Engineering graduates who have secured placements at top companies?",RAG,0.85
+2026-03-05T13:08:50.246179,call_test,"my name is aarav, i am from delhi","Welcome to TMU, Aarav! We have a lot of students from Delhi, and I'm sure you'll love our campus. What brings you to our institution today - are you looking for information on our admission process or course offerings?",INTERESTED,0.0
+2026-03-05T13:08:53.481202,call_test,thank you so much riya!,"It was my absolute pleasure! Do call back anytime, I am always here for you.",CHITCHAT,0.85
+2026-03-20T17:29:36.791906,call_api-test,what courses do you offer?,"Oh, I am so sorry! The connection got a bit unclear. Could you please say that one more time?",RAG,0.85
+2026-03-20T17:29:38.184380,call_api-test,where is the university located?,"I just missed that, dear. Network thoda garbar ho gaya. Could you repeat that for me?",RAG,0.85
+2026-03-20T17:29:39.669939,call_api-test,what admission open is abhi?,"I just missed that, dear. Network thoda garbar ho gaya. Could you repeat that for me?",RAG,0.85
+2026-03-20T17:29:40.912090,call_api-test,hostel of fees how much hai?,"I just missed that, dear. Network thoda garbar ho gaya. Could you repeat that for me?",RAG,0.85
+2026-03-20T17:29:42.281957,call_api-test,what is the eligibility criteria for m.tech in computer science specifically for gate qualified students?,"Oh, I am so sorry! The connection got a bit unclear. Could you please say that one more time?",RAG,0.85
+2026-03-20T17:29:43.527873,call_api-test,tell Mechanical Engineering about the scholarship for merit students having 90% in 12th class,Sorry about that — I could not quite hear you. Please go ahead and say it again.,RAG,0.85
+2026-03-20T17:29:44.830414,call_api-test,"mujhe B.Tech Computer Science Engineering in admission take hai, lateral entry of what process is diploma walon of liye?",Sorry about that — I could not quite hear you. Please go ahead and say it again.,RAG,0.85
+2026-03-20T17:29:46.261194,call_api-test,what placement rate 100% is or bas marketing hai? sach batao.,"Oh, I am so sorry! The connection got a bit unclear. Could you please say that one more time?",RAG,0.85
+2026-03-20T17:55:02.974683,call_test-voice,Where is the university located?,Where is TMU located? Q3: TMU ki ranking kya hai?,RAG,0.85
+2026-03-20T17:55:04.272066,call_test-voice,Hostel ki fees kitni hai?,"Ji, Q1: What is the fee for BPharm at TMU? Q2: BPharm ki fees kitni hai?",RAG,0.85
+2026-03-20T17:55:07.071977,call_test-voice,"Mujhe B.Tech CSE mein admission lena hai, mera naam Ravi hai aur main Delhi se hoon","Perfect, main aapki details note kar rahi hoon. Aapko jis course ki information chahiye, main turant batati hoon.",INTERESTED,0.0
+2026-03-20T17:56:18.254402,call_test-voice,Where is the university located?,"With a campus spanning over 130 acres, Teerthanker Mahaveer University is a dream destination where modern infrastructure, world-class facilities, and a supportive community create the perfect backdrop for your academic journey. Every corner of TMU is thoughtfully designed to inspire and support you, fostering a dynamic environment that complements both your academic and personal growth",RAG,0.85
+2026-03-20T17:56:19.547455,call_test-voice,Hostel ki fees kitni hai?,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:56:22.511483,call_test-voice,"Mujhe B.Tech CSE mein admission lena hai, mera naam Ravi hai aur main Delhi se hoon","Perfect, main aapki details note kar rahi hoon. Aapko jis course ki information chahiye, main turant batati hoon.",INTERESTED,0.0
+2026-03-20T17:57:14.691076,call_test-voice,"Mujhe B.Tech CSE mein admission lena hai, mera naam Ravi hai aur main Delhi se hoon","Perfect, main aapki details note kar rahi hoon. Aapko jis course ki information chahiye, main turant batati hoon.",INTERESTED,0.0
+2026-03-20T17:57:17.405061,call_api-test,What courses do you offer?,"Q1: What do you mean by cloud computing?Ans: Cloud computing refers to the delivery of computing services—such as servers, storage, databases, networking, software, analytics, and intelligence—over the internet (commonly called “the cloud”) to offer faster innovation, flexible resources, and economies of scale",RAG,0.85
+2026-03-20T17:57:18.849946,call_api-test,Where is the university located?,"With a campus spanning over 130 acres, Teerthanker Mahaveer University is a dream destination where modern infrastructure, world-class facilities, and a supportive community create the perfect backdrop for your academic journey. Every corner of TMU is thoughtfully designed to inspire and support you, fostering a dynamic environment that complements both your academic and personal growth",RAG,0.85
+2026-03-20T17:57:20.182596,call_api-test,Kya admission open hai abhi?,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:57:21.624235,call_api-test,Hostel ki fees kitni hai?,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:57:22.925843,call_api-test,What is the eligibility criteria for M.Tech in Computer Science specifically for GATE qualified students?,What is the eligibility for BTech (AICTE Approved) in Computer Science & Engineering?,RAG,0.85
+2026-03-20T17:57:24.332603,call_api-test,tell me about the scholarship for merit students having 90% in 12th class,50% tuition fee waiver for Jain Minority students Merit Scholarship for 12th >90% marks,RAG,0.85
+2026-03-20T17:57:25.594068,call_api-test,"Mujhe B.Tech CSE mein admission lena hai, lateral entry ka kya process hai diploma walon ke liye?","Ji, Q5: B.Tech Data Science ki details batao.",RAG,0.85
+2026-03-20T17:57:27.026537,call_api-test,Kya placement rate 100% hai ya bas marketing hai? Sach batao.,"Ji, Q5: B.Tech Data Science ki details batao.",RAG,0.85
+2026-03-20T17:58:12.324667,call_test-voice,What courses do you offer?,"I want to give you the exact detail, so let me confirm it properly for you. I can also share more information if you want.",RAG,0.85
+2026-03-20T17:58:13.803803,call_test-voice,Where is the university located?,"With a campus spanning over 130 acres, Teerthanker Mahaveer University is a dream destination where modern infrastructure, world-class facilities, and a supportive community create the perfect backdrop for your academic journey. Every corner of TMU is thoughtfully designed to inspire and support you, fostering a dynamic environment that complements both your academic and personal growth",RAG,0.85
+2026-03-20T17:58:15.151510,call_test-voice,"Mujhe B.Tech CSE mein admission lena hai, lateral entry ka kya process hai diploma walon ke liye?",Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:58:16.064016,call_api-test,What courses do you offer?,"I want to give you the exact detail, so let me confirm it properly for you. I can also share more information if you want.",RAG,0.85
+2026-03-20T17:58:16.530132,call_test-voice,Kya placement rate 100% hai ya bas marketing hai? Sach batao.,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:58:17.351125,call_api-test,Where is the university located?,"With a campus spanning over 130 acres, Teerthanker Mahaveer University is a dream destination where modern infrastructure, world-class facilities, and a supportive community create the perfect backdrop for your academic journey. Every corner of TMU is thoughtfully designed to inspire and support you, fostering a dynamic environment that complements both your academic and personal growth",RAG,0.85
+2026-03-20T17:58:18.791760,call_api-test,Kya admission open hai abhi?,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:58:20.151307,call_api-test,Hostel ki fees kitni hai?,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:58:21.450721,call_api-test,What is the eligibility criteria for M.Tech in Computer Science specifically for GATE qualified students?,"I want to give you the exact detail, so let me confirm it properly for you. I can also share more information if you want.",RAG,0.85
+2026-03-20T17:58:22.875485,call_api-test,tell me about the scholarship for merit students having 90% in 12th class,50% tuition fee waiver for Jain Minority students Merit Scholarship for 12th >90% marks,RAG,0.85
+2026-03-20T17:58:24.184592,call_api-test,"Mujhe B.Tech CSE mein admission lena hai, lateral entry ka kya process hai diploma walon ke liye?",Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85
+2026-03-20T17:58:25.468196,call_api-test,Kya placement rate 100% hai ya bas marketing hai? Sach batao.,Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon.,RAG,0.85

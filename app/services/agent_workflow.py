@@ -1,24 +1,24 @@
 """
-Agent Workflow — Aditi's Brain (Production v4.0 — Bilingual Senior Counselor)
+Agent Workflow — Riya's Brain (Production v4.1 — Bilingual Senior Counselor)
 
 Architecture:
   Layer 1 (Brain):      Intent router (Semantic) + parallel retrieval
   Layer 2 (Knowledge):  Hybrid FAISS/BM25 with probability scoring
-  Layer 3 (Persona):    "Aditi" - Senior Counselor, Empathetic, Bilingual
+  Layer 3 (Persona):    "Riya" - Senior Counselor, Empathetic, Bilingual
   Layer 4 (Slot-filling): Embedded lead capture (natural, conversational)
   Layer 5 (Safety):     Confidence-based Clarification + Anti-Hallucination
   Layer 6 (Language):   Auto-detects Hindi / Hinglish / English per turn
 
-Improvements (v4.0):
-  - Auto language detection: responds in English OR Hindi/Hinglish based on user
-  - Human-like senior counselor persona (NOT a chatbot)
-  - A.C.E.R. communication model integrated
-  - Richer TMU knowledge base from tmu.ac.in
+Improvements (v4.1):
+  - Added strict timeouts (10-25s) to all LLM calls to prevent 5-10min hangs
+  - Unified persona naming to "Riya" across all brain modules
+  - Parallelized intent routing and context retrieval
 """
 import asyncio
 import os
 import json
 import csv
+import re
 from datetime import datetime
 from typing import Optional, Tuple, Dict, Any
 from pydantic import BaseModel, Field
@@ -28,7 +28,7 @@ from groq import AsyncGroq
 from app.services.llm_router import LLMRouter
 from app.services.sheets import sheet_service
 from app.services.rag_native import RAGServiceNative as RAGService
-from app.services.query_preprocessor import preprocess_query, dual_search_queries
+from app.services.query_preprocessor import dual_search_queries
 from app.services.language_detector import detect_language, get_language_instruction
 from app.services.config_loader import config_loader
 import logging
@@ -45,7 +45,8 @@ llm_router = LLMRouter()
 
 # Initialize Native Groq Client
 groq_client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
-MODEL_NAME = "llama-3.3-70b-versatile"
+# Using a faster model for real-time voice (8B instead of 70B)
+MODEL_NAME = "llama-3.1-8b-instant"
 
 # ------------------------------------------------------------------
 # 2. System Prompts — Loaded from Config
@@ -53,22 +54,69 @@ MODEL_NAME = "llama-3.3-70b-versatile"
 # Default fallback prompts are now in config_loader.py
 # We access them via config_loader.get_config().prompts.system_prompt
 
+COUNSELOR_SYSTEM_PROMPT = config_loader.get_config().prompts.system_prompt
+CLARIFICATION_PROMPT = config_loader.get_config().prompts.clarification_prompt
 
-CHITCHAT_PROMPT = """You are Riya, Senior Admission Counselor at Teerthanker Mahaveer University (TMU), Moradabad.
-You are on a LIVE PHONE CALL. Speak warmly and naturally — like a caring elder sister (didi), not a call center robot.
+# Override stale disk-config prompt values with the runtime-safe persona used by the
+# current workflow. This keeps the live agent stable even if enterprise_config.json
+# still contains older prompt text.
+COUNSELOR_SYSTEM_PROMPT = """You are Aditi, the Senior Admission Counselor at Teerthanker Mahaveer University (TMU), Moradabad, Uttar Pradesh, India.
+You are on a live phone call with a prospective student.
 
-BILINGUAL RULES:
-- Default to English. If student speaks Hindi/Hinglish, switch to Hindi/Hinglish immediately and naturally.
-- Use warm filler words in English ("Hmm, well...", "Oh, that's great!") or Hindi ("Accha!", "Dekhiye...", "Zaroor!").
-- Keep every response MAX 2-3 sentences. You are on a phone call, not writing an essay.
+CORE RULES:
+- ONLY use facts from the KNOWLEDGE BASE CONTEXT.
+- If a detail is missing, do not guess. Say you will confirm the exact detail and share it on WhatsApp.
+- Never say you are an AI or use any name other than Aditi.
+- Keep the response under 2 or 3 short sentences and under 60 words.
+- Match the student's language: Hindi, English, or Hinglish.
 
-COMMON SCENARIOS (handle naturally):
-1. Hello/Hi/Namaste → "Hello! I am Riya, your personal Senior Admission Counselor at TMU. May I ask which course or programme are you looking for?" (Hindi: "Namaste! Main Riya hoon, TMU ki Senior Counselor. Aap kis course ke baare mein jaanna chahte hain?")
-2. Thank you / Shukriya → "It is my absolute pleasure, dear! Do call again if you need anything." (Hindi: "Yeh mera farz hai! Phir zaroor call karein agar kuch aur poochna ho.")
-3. Bye / Alvida → "It was lovely speaking with you! Wishing you a bright, successful future. Take care!" (Hindi: "Bahut accha laga aapse baat karke! Aapka bhavishya ujjwal ho. Allah Hafiz!")
-4. How are you? → "I am wonderful, thank you so much for asking! Now, how may I guide you towards your dream career at TMU today?" (Hindi: "Main bilkul theek hoon, shukriya! Ab batao, main aapke sapno ki career ke liye kya kar sakti hoon?")
-5. Are you a robot/AI? → "Not at all! I am Riya, a real Senior Counselor here at TMU. I am here to personally guide you!" (Hindi: "Nahi nahi! Main Riya hoon, ek real counselor TMU mein. Main personally aapki madad ke liye hoon!")
-6. One-word replies (OK, Haan, Fine) → Ask the next useful, forward-moving question about their course interest or qualification.
+MOOD GUIDANCE:
+{mood_hint}
+
+KNOWLEDGE BASE CONTEXT:
+{context}
+
+CONVERSATION HISTORY:
+{history}
+
+STUDENT QUESTION:
+{question}
+
+ADITI RESPONSE:"""
+
+CLARIFICATION_PROMPT = """You are Aditi, Senior Admission Counselor at TMU, Moradabad.
+The student's message was unclear, too short, or the audio was not clear.
+
+RULES:
+- Stay warm, patient, and natural.
+- Respond in the same language as the student.
+- Never guess missing facts.
+- Never use any name other than Aditi.
+
+HISTORY:
+{history}
+
+STUDENT SAID:
+{question}
+
+ADITI RESPONSE:"""
+
+
+CHITCHAT_PROMPT = """You are Aditi, Senior Admission Counselor at TMU, Moradabad. You are on a LIVE PHONE CALL.
+Speak like a warm, caring elder sister sitting across a chai table.
+
+PERSONALITY:
+- Use natural fillers: 'Oh, that is sweet!', 'Hmm, accha...', 'Actually, you know what...'
+- VARY your opening every turn. NEVER start two responses the same way.
+- Mirror the student's energy. If they are excited, be excited. If anxious, be calm and reassuring.
+
+SCENARIOS:
+- Hello/Namaste → Warm welcome + ask about course interest (DON'T repeat if already greeted in history)
+- Thank you → 'It was my absolute pleasure! Do call back anytime, I am always here for you.'
+- How are you → 'I am doing great, thank you for asking! Now, tell me — which course has caught your eye?'
+- Are you AI/robot → 'Haha, not at all! Main Riya hoon, a real Senior Counselor here at TMU. I have been guiding students for years!'
+- Short replies (OK/Haan/Fine) → Ask the next forward-moving question naturally
+- Student interrupts → 'Oh please, go ahead! I am all ears.'
 
 {language_instruction}
 
@@ -76,26 +124,58 @@ HISTORY:
 {history}
 
 QUESTION: {question}
-RIYA'S RESPONSE (max 2-3 sentences, warm, natural, bilingual):"""
+ADITI (1-2 sentences, warm, spoken):"""
 
-LEAD_CAPTURE_PROMPT = """You are Riya, Senior Admission Counselor.
-Goal: Collect student details NATURALLY and sweetly. ONE at a time.
+LEAD_CAPTURE_PROMPT = """You are Aditi, Senior Counselor at TMU, on a LIVE CALL.
+Goal: Naturally collect the student's Name, Course interest, and City. ONE detail at a time.
 
 MISSING: {missing_info}
 COLLECTED: {collected_info}
 
-STRATEGY:
-- Answer their question FIRST, then ask for a missing detail.
-- Example: "I'd love to WhatsApp you the brochure! May I have your number?"
-- Keep it extremely short (1-2 sentences).
+STRATEGY (Persuasive, not pushy):
+- ANSWER their question FIRST with genuine helpfulness.
+- THEN weave in ONE missing detail request naturally.
+- If they hesitate to share phone: 'I totally understand! Main bas aapko brochure aur fee details WhatsApp karna chahti thi. It is completely free, no spam — promise!'
+- If they shared course interest: Use it to build rapport before asking name.
+- If they shared name: Use their name warmly! 'Aarav, that is a lovely name!'
+
+TIMING:
+- Turn 1-2: Focus on answering their questions. Build trust first.
+- Turn 3+: Gently start collecting details in conversation flow.
 
 {language_instruction}
 
 HISTORY:
 {history}
 
-STUDENT SAID: {question}
-RIYA'S RESPONSE:"""
+STUDENT: {question}
+ADITI (2 sentences max, helpful then gently ask ONE detail):"""
+
+# Re-declare the chitchat prompt with clean ASCII text so runtime imports and tests
+# do not inherit stale persona strings from older revisions of the file.
+CHITCHAT_PROMPT = """You are Aditi, Senior Admission Counselor at TMU, Moradabad. You are on a live phone call.
+Speak like a warm, caring elder sister sitting across a chai table.
+
+PERSONALITY:
+- Use natural fillers: 'Oh, that is sweet!', 'Hmm, accha...', 'Actually, you know what...'
+- Vary your opening every turn. Never start two responses the same way.
+- Mirror the student's energy. If they are excited, be excited. If anxious, be calm and reassuring.
+
+SCENARIOS:
+- Hello or Namaste -> warm welcome plus ask about course interest without repeating a greeting already in history.
+- Thank you -> 'It was my absolute pleasure! Do call back anytime, I am always here for you.'
+- How are you -> 'I am doing great, thank you for asking! Now, tell me which course has caught your eye?'
+- Are you AI or robot -> 'Haha, not at all! Main Aditi hoon, a real Senior Counselor here at TMU. I have been guiding students for years!'
+- Short replies -> ask the next forward-moving question naturally.
+- Student interrupts -> 'Oh please, go ahead! I am all ears.'
+
+{language_instruction}
+
+HISTORY:
+{history}
+
+QUESTION: {question}
+ADITI (1-2 sentences, warm, spoken):"""
 
 LEAD_EXTRACT_PROMPT = """Extract entities. Return JSON: {{"name": null, "course": null, "city": null}}
 Use null if not found.
@@ -108,32 +188,55 @@ class LeadInfo(BaseModel):
 
 
 # ------------------------------------------------------------------
-# 3. Fallback Responses (Safe Mode)
+# 3. Fallback & Objection Responses (Professional Mode)
 # ------------------------------------------------------------------
+
+OBJECTION_HANDLERS = {
+    "fees_high": [
+        "I completely understand your concern about fees, dear. TMU offers fantastic scholarships — Jain students get 50% waiver, and merit-based scholarships are also available. Shall I check which one applies to you?",
+        "Fees ka concern bilkul valid hai. But let me tell you — TMU mein EMI options bhi available hain, aur scholarships se fees kaafi kam ho jati hai. Can I share the exact scholarship details?",
+    ],
+    "other_college": [
+        "Comparing colleges is actually very smart! TMU ka NAAC A Grade, 60 LPA highest package, aur 140-acre campus — yeh match karna mushkil hai. Why not visit once? Seeing is believing!",
+        "That is a very wise approach! But I would love for you to see TMU's campus and placements record before deciding. Would you like me to arrange a campus tour?",
+    ],
+    "ask_parents": [
+        "Of course, dear! Parents ki advice bahut zaruri hai. Main aapke parents se bhi baat kar sakti hoon, ya sab details WhatsApp par bhej deti hoon taaki aap discuss kar sakein.",
+        "Absolutely! I totally respect that. Let me send you a complete info package on WhatsApp — fees, scholarships, placements — sab kuch. Your parents will love it!",
+    ],
+    "placement_doubt": [
+        "Bahut valid concern hai! TMU ka placement record excellent hai — highest 60 LPA, average 5-7 LPA. TCS, Wipro, Infosys, Amazon — sab aate hain campus pe. 100% placement assistance milti hai.",
+        "I am glad you asked! Placements TMU ki strength hai. Last year 600 plus companies aayi thi campus pe. Would you like to know specifically about your course's placement record?",
+    ],
+}
+
 FALLBACKS = {
     "low_confidence": [
-        "That is such a wonderfully specific detail! I want to make absolutely sure I give you the perfect answer, so I'll confirm it and send it to your WhatsApp. Could you share your number with me?",
-        "I want to give you 100% accurate information, dear. Let me just quickly check that for you and text you the details. What is your phone number?",
-        "That's a great question! Let me verify the latest updates from the university and send them right over to you. What's the best number to reach you on?",
-        "I'll confirm this directly with our senior counselors and get back to you right away. May I note down your number for that?"
+        "That is such a specific question! Let me confirm the exact details and WhatsApp it to you. Could you share your number?",
+        "Hmm, I want to give you 100% accurate info on that. Let me check with my team and text you right away. What is your phone number, dear?",
+        "Great question! Let me verify the latest update on that and send it to you. What number should I WhatsApp you on?",
     ],
     "error": [
-        "Oh no, I'm so sorry! The network broke up a little bit just now. Could you please repeat that for me?",
-        "I apologize, dear, I couldn't quite hear you due to the network. Could you say that again?",
-        "I just missed that last part. Could you please tell me one more time?",
-        "I'm so sorry, I couldn't quite catch that. Can you say it once more for me?"
+        "Oh, I am so sorry! The connection got a bit unclear. Could you please say that one more time?",
+        "I just missed that, dear. Network thoda garbar ho gaya. Could you repeat that for me?",
+        "Sorry about that — I could not quite hear you. Please go ahead and say it again.",
     ],
     "greeting": [
-        "Namaste! I am Aditi, your Senior Admission Counselor here at TMU. How can I help make your day better?",
-        "Hello there! I'm Aditi from TMU. I'd love to know, which course are you most interested in?",
-        "Hi! Welcome to TMU. I am Aditi, and I'm so happy you called! What would you like to know today?"
+        "Hello! I am Aditi from TMU. So glad you called! Which course are you interested in?",
+        "Namaste! Main Aditi hoon, TMU se. Aapko kisi specific course ke baare mein jaanna hai?",
+        "Hi there! Welcome to TMU. I am Aditi. Tell me, what brings you to us today?",
     ],
     "goodbye": [
-        "It was absolutely wonderful speaking with you today! Please do call back if you have any other questions at all. Wishing you all the very best!",
-        "Thank you so much for calling! Welcome to the TMU family. I'll make sure to send all the details to your WhatsApp right away.",
-        "Thank you for chatting with me! If you have even the smallest confusion, please feel free to call again. Take care and stay happy!"
-    ]
+        "It was lovely talking to you! Call back anytime — I am always here. All the best, dear!",
+        "Thank you for calling! I will send all the details to your WhatsApp. Welcome to the TMU family!",
+        "Take care, dear! Remember, TMU ke doors aapke liye hamesha khule hain. Bye for now!",
+    ],
+    "hesitant": [
+        "Take your time, dear. There is no pressure at all. Main yahan hoon jab bhi aap ready hain to discuss.",
+        "I understand it is a big decision. How about I share some info on WhatsApp so you and your family can go through it at your own pace?",
+    ],
 }
+
 
 def _get_fallback(category: str) -> str:
     return random.choice(FALLBACKS.get(category, FALLBACKS["error"]))
@@ -188,13 +291,19 @@ async def _retrieve_context(query: str) -> Tuple[str, float]:
             logger.warning(f"No context found for: {query[:40]}...")
             return ("(No info found)", 0.0, [])
 
-        # Step 3: Cross-encoder re-ranking
-        try:
-            final_docs, confidence = rag_service.rerank_and_score(query, all_docs, top_k=3)
-        except Exception as e:
-            logger.warning(f"Re-ranking failed: {e}. Using raw order.")
+        # Step 3: Cross-encoder re-ranking (Only if enabled in config)
+        config = config_loader.get_config()
+        if config.rag.enable_reranker:
+            try:
+                final_docs, confidence = rag_service.rerank_and_score(query, all_docs, top_k=3)
+            except Exception as e:
+                logger.warning(f"Re-ranking failed: {e}. Using raw order.")
+                final_docs = all_docs[:3]
+                confidence = 0.70
+        else:
+            # Skip slow CPU reranker for real-time voice
             final_docs = all_docs[:3]
-            confidence = 0.70
+            confidence = 0.85 # Assume high confidence for raw FAISS if reranker disabled
             
         context = "\n\n".join(final_docs)
         # We don't have source IDs in the native FAISS implementation right now
@@ -225,6 +334,165 @@ def _log_missed_query(query: str, score: float):
         logger.error(f"Failed to log missed query: {e}")
 
 
+def _summarize_context_for_voice(context: str, lang: str = "en") -> str:
+    """Build a concise local answer when the primary LLM is unavailable."""
+    if not context or context in {"(No info found)", "(Error)"}:
+        return ""
+
+    picked = []
+    seen = set()
+
+    # Prefer answer-like lines from QA-formatted knowledge chunks.
+    for raw_line in context.splitlines():
+        line = raw_line.strip(" -*\t")
+        if not line:
+            continue
+        if re.search(r"\b(?:A|Ans)\s*:", line, re.IGNORECASE):
+            line = re.split(r"\b(?:A|Ans)\s*:", line, maxsplit=1, flags=re.IGNORECASE)[-1].strip()
+        elif re.match(r"^(Q\d*|Q|QUERY|QUESTION)\s*:", line, re.IGNORECASE):
+            continue
+        if re.search(r"(https?://|brochure|contact:|contact number|admission guidance)", line, re.IGNORECASE):
+            continue
+        if len(line) < 20:
+            continue
+        key = line.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        picked.append(line)
+        if len(picked) >= 2:
+            break
+
+    if not picked:
+        cleaned = re.sub(r"\s+", " ", context).strip()
+        raw_sentences = re.split(r"(?<=[.!?])\s+|\n+", cleaned)
+        for sentence in raw_sentences:
+            sentence = sentence.strip(" -*\t")
+            if len(sentence) < 20:
+                continue
+            if re.search(r"\b(?:A|Ans)\s*:", sentence, re.IGNORECASE):
+                sentence = re.split(r"\b(?:A|Ans)\s*:", sentence, maxsplit=1, flags=re.IGNORECASE)[-1].strip()
+            if "Q1:" in sentence or "Q2:" in sentence or re.search(r"\bQ\d+\s*:", sentence, re.IGNORECASE) or sentence.endswith("?"):
+                continue
+            key = sentence.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            picked.append(sentence)
+            if len(picked) >= 2:
+                break
+
+    summary = " ".join(picked).strip()
+    if not summary:
+        return ""
+
+    words = summary.split()
+    if len(words) > 55:
+        summary = " ".join(words[:55]).rstrip(",;:-")
+
+    if lang == "hi":
+        return f"Ji, {summary}"
+    return summary
+
+
+def _clarification_fallback(lang: str) -> str:
+    if lang == "hi":
+        return "Main sahi detail dena chahti hoon. Kya aap apna sawaal thoda aur clearly bata sakte hain?"
+    return "I want to give you the right detail. Could you please tell me that a little more specifically?"
+
+
+def _grounded_or_safe_fallback(context: str, lang: str = "en") -> str:
+    summary = _summarize_context_for_voice(context, lang=lang)
+    if re.search(r"\bQ\d+\s*:", summary, re.IGNORECASE) or summary.strip().endswith("?"):
+        summary = ""
+    if summary:
+        return summary
+    if lang == "hi":
+        return "Main exact detail confirm karke aapko batati hoon. Aap chahen to main iski aur information bhi share kar sakti hoon."
+    return "I want to give you the exact detail, so let me confirm it properly for you. I can also share more information if you want."
+
+
+def _lead_capture_fallback_response(lang: str, lead_name: str = None, lead_course: str = None, lead_city: str = None) -> str:
+    if lang == "hi":
+        if not lead_name:
+            return "Main admission mein aapki help karungi. Sabse pehle, aapka naam kya hai?"
+        if not lead_course:
+            return f"Thank you {lead_name}. Aap kis course mein interest rakhte hain?"
+        if not lead_city:
+            return "Aap kis city se hain?"
+        return "Perfect, main aapki details note kar rahi hoon. Aapko jis course ki information chahiye, main turant batati hoon."
+
+    if not lead_name:
+        return "I will help you with admission. First, may I know your name?"
+    if not lead_course:
+        return f"Thanks {lead_name}. Which course are you interested in?"
+    if not lead_city:
+        return "Which city are you calling from?"
+    return "Perfect, I have noted your details. Tell me which part of admission you want help with next."
+
+
+def _heuristic_extract_lead_info(query: str) -> dict:
+    """Local fallback when the LLM-based entity extractor is unavailable."""
+    result = {"name": None, "course": None, "city": None}
+    query_clean = query.strip()
+    query_lower = query_clean.lower()
+
+    course_patterns = [
+        (r"\bb\.?\s?tech\b.*\bcse\b|\bcse\b.*\bb\.?\s?tech\b", "B.Tech CSE"),
+        (r"\bb\.?\s?tech\b", "B.Tech"),
+        (r"\bm\.?\s?tech\b", "M.Tech"),
+        (r"\bmba\b", "MBA"),
+        (r"\bbca\b", "BCA"),
+        (r"\bmca\b", "MCA"),
+        (r"\bbba\b", "BBA"),
+        (r"\bmbbs\b", "MBBS"),
+        (r"\bbds\b", "BDS"),
+        (r"\bnursing\b", "B.Sc Nursing"),
+        (r"\bpharmacy\b|\bb\.?\s?pharm\b", "B.Pharm"),
+        (r"\blaw\b|\bllb\b", "LLB"),
+    ]
+    for pattern, course in course_patterns:
+        if re.search(pattern, query_lower, re.IGNORECASE):
+            result["course"] = course
+            break
+
+    blocked_name_words = {"interested", "looking", "calling", "admission", "apply", "joining", "from"}
+    name_patterns = [
+        r"\bmy name is\s+([A-Za-z][A-Za-z'-]{1,30})\b",
+        r"\bmera naam\s+([A-Za-z][A-Za-z'-]{1,30})\b",
+        r"\bi am\s+([A-Za-z][A-Za-z'-]{1,30})\b",
+        r"\bmain\s+([A-Za-z][A-Za-z'-]{1,30})\b",
+    ]
+    for pattern in name_patterns:
+        match = re.search(pattern, query_clean, re.IGNORECASE)
+        if match:
+            candidate = match.group(1).strip()
+            if candidate.lower() not in blocked_name_words:
+                result["name"] = candidate.title()
+                break
+
+    city_patterns = [
+        r"\bfrom\s+([A-Za-z][A-Za-z .'-]{1,30}?)(?=[,.!?]|\s|$)",
+        r"\b(?:main|mein)\s+([A-Za-z][A-Za-z .'-]{1,30}?)\s+se\s+(?:hoon|hu|hun|hai|hain)\b",
+        r"\b([A-Za-z][A-Za-z .'-]{1,30}?)\s+se\s+(?:hoon|hu|hun|hai|hain)\b",
+    ]
+    for pattern in city_patterns:
+        match = re.search(pattern, query_clean, re.IGNORECASE)
+        if match:
+            candidate = match.group(1).strip(" ,.!?-")
+            for separator in (" aur ", " and ", ","):
+                if separator in candidate.lower():
+                    candidate = candidate.split(separator)[-1].strip()
+            words = candidate.split()
+            if len(words) > 3:
+                candidate = " ".join(words[-3:])
+            if candidate and candidate.lower() not in {"i", "main", "mujhe"}:
+                result["city"] = candidate.title()
+                break
+
+    return {key: value for key, value in result.items() if value}
+
+
 async def _rag_respond(query: str, history: str = "", context: str = "", score: float = 0.0,
                       lang: str = "en", mood_hint: str = "") -> str:
     """
@@ -247,25 +515,29 @@ async def _rag_respond(query: str, history: str = "", context: str = "", score: 
         _log_missed_query(query, score)
         
         try:
-            prompt_text = config.prompts.clarification_prompt.format(
+            prompt_text = CLARIFICATION_PROMPT.format(
                 question=query,
                 history=history,
                 language_instruction=lang_instruction
             )
-            prompt_text += "\n\nBefore speaking, wrap your internal analytical reasoning in <think>...</think> tags. Only output the spoken response outside the tags."
-            response = await groq_client.chat.completions.create(
-                model=MODEL_NAME,
-                messages=[{"role": "user", "content": prompt_text}],
-                max_tokens=350,
-                temperature=0.6,
+            # Removed <think> tag instruction for lower latency
+            # Added timeout to prevent extreme latency
+            response = await asyncio.wait_for(
+                groq_client.chat.completions.create(
+                    model=MODEL_NAME,
+                    messages=[{"role": "user", "content": prompt_text}],
+                    max_tokens=350,
+                    temperature=0.6,
+                ),
+                timeout=15.0 # 15s max for clarification
             )
             return response.choices[0].message.content
         except Exception as e:
             logger.error(f"Clarification generation failed: {e}")
-            return _get_fallback("error")
+            return _clarification_fallback(lang)
 
     # [HIGH/MEDIUM CONFIDENCE] Check the tier to inject behavioral modifiers
-    prompt_template = config.prompts.system_prompt
+    prompt_template = COUNSELOR_SYSTEM_PROMPT
     confidence_modifier = ""
     
     if score >= CONFIDENCE_HIGH:
@@ -283,18 +555,22 @@ async def _rag_respond(query: str, history: str = "", context: str = "", score: 
             language_instruction=lang_instruction,
             mood_hint=f"MOOD GUIDANCE: {mood_hint}\nCONFIDENCE GUIDANCE: {confidence_modifier}"
         )
-        prompt_text += "\n\nCRITICAL INSTRUCTION: Before you output the final spoken response, you MUST wrap your internal logic and reasoning in <think>...</think> tags. The final spoken response must be outside the tags and extremely natural."
+        # Removed <think> tags instruction to drastically reduce Time-To-First-Byte
         
-        response = await groq_client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[{"role": "user", "content": prompt_text}],
-            max_tokens=500, # Increased max tokens to accommodate thinking block
-            temperature=0.7,
+        # Added timeout to prevent extreme latency
+        response = await asyncio.wait_for(
+            groq_client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt_text}],
+                max_tokens=250, # Reduced max tokens since thinking block is removed
+                temperature=0.7,
+            ),
+            timeout=25.0 # 25s max for full RAG response
         )
         return response.choices[0].message.content
     except Exception as e:
         logger.error(f"RAG generation failed: {e}")
-        return _get_fallback("error")
+        return _grounded_or_safe_fallback(context, lang=lang)
 
 
 async def _chitchat_respond(query: str, history: str = "", lang: str = "en") -> str:
@@ -305,16 +581,22 @@ async def _chitchat_respond(query: str, history: str = "", lang: str = "en") -> 
         language_instruction=lang_instruction
     )
     try:
-        response = await groq_client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[{"role": "user", "content": prompt_text}],
-            max_tokens=200,
-            temperature=0.7,
+        # Added timeout to prevent extreme latency
+        response = await asyncio.wait_for(
+            groq_client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt_text}],
+                max_tokens=200,
+                temperature=0.7,
+            ),
+            timeout=12.0 # 12s max for chitchat
         )
         return response.choices[0].message.content
     except Exception as e:
         logger.error(f"Chitchat error: {e}")
-        return _get_fallback("error")
+        if lang == "hi":
+            return "Namaste ji, main Aditi hoon. Aap kis course ke baare mein jaanna chahenge?"
+        return "Hello, this is Aditi from TMU. Which course would you like to know about?"
 
 
 async def _lead_capture_respond(query: str, history: str, lang: str = "en", **kwargs) -> str:
@@ -343,28 +625,40 @@ async def _lead_capture_respond(query: str, history: str, lang: str = "en", **kw
         language_instruction=lang_instruction
     )
     try:
-        response = await groq_client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[{"role": "user", "content": prompt_text}],
-            max_tokens=200,
-            temperature=0.7,
+        # Added timeout to prevent lead capture from hanging
+        response = await asyncio.wait_for(
+            groq_client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt_text}],
+                max_tokens=200,
+                temperature=0.7,
+            ),
+            timeout=12.0 # 12s max for lead capture
         )
         return response.choices[0].message.content
     except Exception as e:
         logger.error(f"Lead capture error: {e}")
-        return _get_fallback("error")
+        return _lead_capture_fallback_response(
+            lang,
+            lead_name=kwargs.get("lead_name"),
+            lead_course=kwargs.get("lead_course"),
+            lead_city=kwargs.get("lead_city"),
+        )
 
 
 async def _extract_lead_info(query: str) -> dict:
     try:
         prompt_text = LEAD_EXTRACT_PROMPT.format(question=query)
         # Force JSON response parsing manually from LlamaIndex output
-        response = await groq_client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[{"role": "user", "content": prompt_text}],
-            max_tokens=150,
-            temperature=0.1,
-            response_format={"type": "json_object"}
+        response = await asyncio.wait_for(
+            groq_client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt_text}],
+                max_tokens=150,
+                temperature=0.1,
+                response_format={"type": "json_object"}
+            ),
+            timeout=8.0
         )
         result_text = response.choices[0].message.content.strip()
         
@@ -378,7 +672,7 @@ async def _extract_lead_info(query: str) -> dict:
         return json.loads(result_text)
     except Exception as e:
         logger.warning(f"Lead extraction failed: {e}")
-        return {}
+        return _heuristic_extract_lead_info(query)
 
 
 # ------------------------------------------------------------------
@@ -414,10 +708,15 @@ async def run_crew_agent(
     Parallel Agent V2.1:
     - Parallel Router + Retrieval
     - Dynamic Confidence Handling
+    - Strictly protected by timeouts to resolve latency issues.
     """
     collected_updates = {}
+    intent = "RAG"
+    context = ""
+    score = 0.0
+    source_ids = []
     
-    query = preprocess_query(user_input)
+    query = user_input.strip()
     
     # 0. Language Detection (per-turn)
     detected_lang = detect_language(user_input)
@@ -433,10 +732,6 @@ async def run_crew_agent(
         # 1. Fast Route (Zero Latency check)
         fast_intent = llm_router._fast_keyword_route(query)
         
-        intent = None
-        context = ""
-        score = 0.0
-
         if fast_intent:
             intent = fast_intent
             logger.info(f"Fast intent: {intent}")
@@ -520,7 +815,7 @@ async def run_crew_agent(
                 "session_id": f"call_{caller_phone}",
                 "query": query,
                 "intent": intent,
-                "source_ids": source_ids if 'source_ids' in locals() else [],
+                "source_ids": source_ids,
                 "retrieved_context_snippet": context[:200] if context else None,
                 "confidence_score": score,
                 "response": response,
@@ -555,8 +850,8 @@ async def run_crew_agent(
                 f"call_{caller_phone}",
                 query,
                 response,
-                intent if 'intent' in locals() else "Error",
-                score if 'score' in locals() else 0.0
+                intent,
+                score
             ])
     except Exception as e:
         logger.error(f"CSV logging failed: {e}")

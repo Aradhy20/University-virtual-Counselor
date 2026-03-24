@@ -6,8 +6,10 @@ import json
 import logging
 from datetime import datetime
 
+from pathlib import Path
+
 # Add project root to path
-sys.path.append(r"d:\tmu\university_counselor")
+sys.path.append(str(Path(__file__).parent.parent))
 
 from app.services.agent_workflow import run_crew_agent as run_agent
 

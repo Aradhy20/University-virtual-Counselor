@@ -5,7 +5,7 @@ from app.services.campaign_service import campaign_service
 import logging
 
 router = APIRouter(prefix="/campaign", tags=["Campaign"])
-logger = logging.getLogger("aditi.api.campaign")
+logger = logging.getLogger("riya.api.campaign")
 
 class Contact(BaseModel):
     name: str = "Student"

@@ -3,17 +3,30 @@ Native RAG Service — Pure FAISS and SentenceTransformers.
 Zero framework dependencies (No LangChain, No LlamaIndex).
 """
 import os
-import faiss
 import pickle
-import numpy as np
 import logging
 from pathlib import Path
 from typing import List, Tuple, Dict
-from sentence_transformers import SentenceTransformer, CrossEncoder
 from dotenv import load_dotenv
 
+try:
+    import faiss
+except ImportError:
+    faiss = None
+
+try:
+    import numpy as np
+except ImportError:
+    np = None
+
+try:
+    from sentence_transformers import SentenceTransformer, CrossEncoder
+except ImportError:
+    SentenceTransformer = None
+    CrossEncoder = None
+
 load_dotenv()
-logger = logging.getLogger("aditi.rag_native")
+logger = logging.getLogger("riya.rag_native")
 
 class RAGServiceNative:
     """
@@ -40,8 +53,29 @@ class RAGServiceNative:
 
     def _initialize(self):
         """Loads FAISS index from disk or builds it if absent."""
-        logger.info(f"Loading native encoder: {self.embed_model_name}")
-        self.encoder = SentenceTransformer(self.embed_model_name)
+        if SentenceTransformer is None or np is None or faiss is None:
+            logger.warning("Native RAG dependencies missing. Falling back to keyword-only retrieval.")
+            if self.data_path.exists():
+                with open(self.data_path, "r", encoding="utf-8") as f:
+                    raw_text = f.read()
+                self.documents = [c.strip() for c in raw_text.split('\n\n') if len(c.strip()) > 20]
+            else:
+                self.documents = ["TMU is Teerthanker Mahaveer University in Moradabad, Uttar Pradesh."]
+            return
+
+        try:
+            logger.info(f"Loading native encoder: {self.embed_model_name}")
+            self.encoder = SentenceTransformer(self.embed_model_name)
+        except Exception as exc:
+            logger.warning(f"Encoder load failed: {exc}. Falling back to keyword-only retrieval.")
+            if self.data_path.exists():
+                with open(self.data_path, "r", encoding="utf-8") as f:
+                    raw_text = f.read()
+                self.documents = [c.strip() for c in raw_text.split('\n\n') if len(c.strip()) > 20]
+            else:
+                self.documents = ["TMU is Teerthanker Mahaveer University in Moradabad, Uttar Pradesh."]
+            self.encoder = None
+            return
 
         if self.index_path.exists() and self.metadata_path.exists():
             logger.info("Loading existing FAISS index from disk.")
@@ -104,7 +138,10 @@ class RAGServiceNative:
 
     def retrieve(self, query: str, top_k: int = 5) -> List[str]:
         """Performs L2 vector search in FAISS."""
-        if not self.index or not self.documents:
+        if self.encoder is None or self.index is None:
+            return self._keyword_fallback(query, top_k=top_k)
+
+        if not self.documents:
             return []
             
         query_emb = self.encoder.encode([query], convert_to_numpy=True)
@@ -116,9 +153,29 @@ class RAGServiceNative:
                 results.append(self.documents[idx])
         return results
 
+    def _keyword_fallback(self, query: str, top_k: int = 5) -> List[str]:
+        """Simple lexical fallback when FAISS or transformer dependencies are unavailable."""
+        if not self.documents:
+            return []
+
+        query_terms = {term for term in query.lower().split() if term}
+        scored = []
+        for doc in self.documents:
+            overlap = len(query_terms.intersection(doc.lower().split()))
+            if overlap:
+                scored.append((overlap, doc))
+
+        scored.sort(key=lambda item: item[0], reverse=True)
+        if scored:
+            return [doc for _, doc in scored[:top_k]]
+        return self.documents[:top_k]
+
     def _get_reranker(self):
         """Lazy loads the cross-encoder."""
         if self.reranker is None:
+            if CrossEncoder is None:
+                logger.warning("Cross-encoder dependency missing. Re-ranking disabled.")
+                return None
             logger.info(f"Loading cross-encoder: {self.reranker_model_name}")
             self.reranker = CrossEncoder(self.reranker_model_name, max_length=512)
         return self.reranker
@@ -129,6 +186,8 @@ class RAGServiceNative:
             return [], 0.0
             
         reranker = self._get_reranker()
+        if reranker is None or np is None:
+            return docs[:top_k], 0.5
         pairs = [[query, doc] for doc in docs]
         scores = reranker.predict(pairs)
         

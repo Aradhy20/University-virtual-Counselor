@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from twilio.rest import Client
 
 load_dotenv()
-logger = logging.getLogger("aditi.campaign")
+logger = logging.getLogger("riya.campaign")
 
 class CampaignService:
     def __init__(self):

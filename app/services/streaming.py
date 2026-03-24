@@ -14,7 +14,7 @@ import re
 import logging
 from typing import AsyncGenerator
 
-logger = logging.getLogger("aditi.streaming")
+logger = logging.getLogger("riya.streaming")
 
 
 # Sentence boundary regex — handles Hindi (।), English (. ! ?), and mixed

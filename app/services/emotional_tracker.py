@@ -11,10 +11,12 @@ Phase 4 Upgrade:
   - Silence detection nudge timing
 """
 import re
+import os
 import logging
 from typing import Optional
+from groq import AsyncGroq
 
-logger = logging.getLogger("aditi.emotion")
+logger = logging.getLogger("riya.emotion")
 
 
 # ----------------------------------------------------------
@@ -32,7 +34,7 @@ MOODS = {
             "similarity_boost": 0.85,
             "style": 0.30,            # Less expressive, more soothing
         },
-        "response_hint": "User is frustrated. Be extra patient, apologize briefly, and give a direct answer.",
+        "response_hint": "MOOD: User is frustrated. Be EXTRA patient. Apologize briefly and give a direct, clear answer. Do NOT repeat previous info.",
     },
     "anxious": {
         "keywords": [
@@ -45,7 +47,7 @@ MOODS = {
             "similarity_boost": 0.80,
             "style": 0.40,            # Warm, reassuring
         },
-        "response_hint": "User is anxious. Reassure them, be warm, and provide certainty where possible.",
+        "response_hint": "MOOD: User is anxious. Be extra warm and reassuring. Use: 'Fikr mat kijiye', 'Main guarantee deti hoon', 'Aap bilkul sahi jagah hain'.",
     },
     "excited": {
         "keywords": [
@@ -58,7 +60,33 @@ MOODS = {
             "similarity_boost": 0.80,
             "style": 0.60,            # More energetic, match their energy
         },
-        "response_hint": "User is excited! Match their energy, be enthusiastic, and guide toward action.",
+        "response_hint": "MOOD: User is excited! Match their energy, celebrate with them. Use: 'Arre wah!', 'Bahut badiya!', guide toward action NOW.",
+    },
+    "hesitant": {
+        "keywords": [
+            r"\b(soch raha|thinking|decide nahi|not sure|confused|dwidha|samajh nahi)",
+            r"\b(pata nahi|don.t know|kya karun|options kya|compare|alternative)",
+            r"\b(baad mein|later|time chahiye|abhi nahi|sochta hoon|dekhte hain)",
+        ],
+        "tts_settings": {
+            "stability": 0.55,
+            "similarity_boost": 0.80,
+            "style": 0.45,            # Gentle, patient
+        },
+        "response_hint": "MOOD: User is hesitant/undecided. Be patient, zero pressure. Offer to share info on WhatsApp. Ask what is holding them back gently.",
+    },
+    "parent": {
+        "keywords": [
+            r"\b(mere bete|mere bache|meri beti|my son|my daughter|ward|child)",
+            r"\b(parent|father|mother|papa|mummy|guardian|family)",
+            r"\b(bachche ke liye|admission karwana|uska future)",
+        ],
+        "tts_settings": {
+            "stability": 0.60,
+            "similarity_boost": 0.85,
+            "style": 0.35,            # Respectful, formal
+        },
+        "response_hint": "MOOD: This is a PARENT calling for their child. Be extra respectful, formal. Use 'Aap', 'Ji'. Address their parental concerns about safety, placement, hostel. Reassure them about campus environment.",
     },
     "neutral": {
         "keywords": [],  # Default
@@ -87,16 +115,17 @@ class EmotionalTracker:
         self.current_mood: str = "neutral"
         self.turn_count: int = 0
         self.silence_count: int = 0  # Consecutive silent turns
+        self.groq_client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
-    def update(self, user_text: str) -> str:
+    async def async_update(self, user_text: str) -> str:
         """
-        Analyze user text and update mood state.
+        Analyze user text using LLM and update mood state.
         Returns the current mood.
         """
         self.turn_count += 1
         self.silence_count = 0  # User spoke, reset silence counter
 
-        detected_mood = self._detect_mood(user_text)
+        detected_mood = await self._detect_mood_async(user_text)
         self.mood_history.append(detected_mood)
         
         # Weighted: recent mood matters more, but sustained frustration escalates
@@ -140,19 +169,19 @@ class EmotionalTracker:
     def get_silence_nudge(self) -> Optional[str]:
         """
         Get an appropriate nudge message based on silence count.
-        Returns None if no nudge needed yet.
+        Progressive, natural nudges — not robotic.
         """
         if self.silence_count == 1:
-            return "Aap wahan hain? Main sun rahi hoon, bataiye kya help chahiye?"
+            return "Hello, aap wahan hain? Take your time, main sun rahi hoon!"
         elif self.silence_count == 2:
-            return "Hello? Agar aap kuch aur jaanna chahte hain toh bataiye, main yahan hoon!"
+            return "I am still here whenever you are ready. Koi bhi sawaal ho toh zaroor poochiye!"
         elif self.silence_count >= 3:
-            return "Lagta hai connection issue hai. Aap dubara call kar sakte hain ya WhatsApp par message kijiye!"
+            return "Lagta hai connection mein thodi dikkat aa rahi hai. Aap dubara call kar sakte hain ya 9568918000 par WhatsApp kijiye — main wahan bhi hoon!"
         return None
 
-    def _detect_mood(self, text: str) -> str:
+    async def _detect_mood_async(self, text: str) -> str:
         """
-        Detect mood from text using keyword patterns.
+        Detect mood from text using LLM (zero-shot classification).
         Returns mood category string.
         """
         text_lower = text.lower().strip()
@@ -161,14 +190,26 @@ class EmotionalTracker:
         if len(text_lower) < 3:
             return "neutral"
 
-        # Check each mood category (priority: frustrated > anxious > excited)
-        for mood_name in ["frustrated", "anxious", "excited"]:
-            patterns = MOODS[mood_name]["keywords"]
-            for pattern in patterns:
-                if re.search(pattern, text_lower, re.IGNORECASE):
-                    return mood_name
-
-        return "neutral"
+        try:
+            prompt = f"Categorize the user's emotional state based on this text into EXACTLY ONE of the following categories: 'frustrated', 'anxious', 'excited', 'hesitant', 'parent', or 'neutral'. Respond with ONLY the category word.\nUser text: \"{text}\""
+            
+            response = await self.groq_client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=10,
+                temperature=0.1,
+            )
+            detected = response.choices[0].message.content.strip().lower()
+            
+            # Clean up response just in case the LLM is chatty
+            for valid_mood in ["frustrated", "anxious", "excited", "hesitant", "parent", "neutral"]:
+                if valid_mood in detected:
+                    return valid_mood
+            return "neutral"
+            
+        except Exception as e:
+            logger.error(f"LLM Mood detection failed: {e}. Falling back to neutral.")
+            return "neutral"
 
     def get_summary(self) -> dict:
         """

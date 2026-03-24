@@ -1,5 +1,5 @@
 """
-Language Detector — Auto-detect Hindi vs English for Aditi's bilingual responses.
+Language Detector — Auto-detect Hindi vs English for Riya's bilingual responses.
 
 Detects language from user input and returns a language code:
   - 'hi'  → Hindi / Hinglish (respond in Hindi + English mix)
@@ -10,14 +10,14 @@ Uses keyword frequency to determine language preference.
 import re
 import logging
 
-logger = logging.getLogger("aditi.language")
+logger = logging.getLogger("riya.language")
 
 # Common Hindi / Hinglish words and Devanagari script detection
 HINDI_INDICATORS = [
     # Pure Hindi words (romanized)
     r"\b(mujhe|mera|meri|mere|aapko|aap|hain|hai|kya|kaise|kitni|kitna|batao|bataiye|chahiye|chahte|chahti|kaun|kya|kyun|kyunki|kab|kahan|yahan|udhar|iska|uska|yeh|woh|hum|tum|main|nahi|nahin)\b",
     # Admission-specific Hindi terms
-    r"\b(admission|pravesh|pariksha|shulk|fees|hostel|campus|course|program|scholarship|bvishyaa|padhna|padhai|college|university|kitna|accha|theek|bilkul|zarur|jarur|jankari|details)\b",
+    r"\b(pravesh|pariksha|shulk|padhna|padhai|jankari|accha|theek|bilkul|zarur|jarur|fikr|samajh)\b",
     # Common Hinglish expressions  
     r"\b(ji|ji haan|haan|nahi|acha|accha|thik|theek|ek dam|ek bar|bata|bata do|bata deen|bataiye|batao|samjhe|samajh|aaya|samjha|pata|pata hai|pata nahi|lagta|lagti|chahta|chahti|lena|lena hai|karna|karo|karna chahta)\b",
     # Time expressions in Hindi
@@ -64,10 +64,15 @@ def detect_language(text: str) -> str:
         english_score += len(matches) * 2  # Weight English higher
     
     # Decision
-    if hindi_score >= 2 and hindi_score > english_score:
+    explicit_hindi_signal = any(
+        re.search(pattern, text_lower, re.IGNORECASE)
+        for pattern in (HINDI_INDICATORS[0], HINDI_INDICATORS[2], HINDI_INDICATORS[3])
+    )
+
+    if hindi_score >= 2 and hindi_score >= english_score + 1:
         logger.info(f"Language: Hindi/Hinglish (score={hindi_score} vs en={english_score})")
         return 'hi'
-    elif hindi_score >= 1 and english_score == 0:
+    elif explicit_hindi_signal and english_score == 0 and hindi_score >= 1:
         logger.info(f"Language: Hindi/Hinglish (only hindi signals)")
         return 'hi'
     

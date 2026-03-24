@@ -45,7 +45,7 @@ def main():
 
     print("[INFO] Starting cloudflared tunnel...")
     proc = subprocess.Popen(
-        [CLOUDFLARED, "tunnel", "--url", "http://localhost:8000"],
+        [CLOUDFLARED, "tunnel", "--url", "http://localhost:8005"],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
